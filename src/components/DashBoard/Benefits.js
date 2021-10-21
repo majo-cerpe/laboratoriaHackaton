@@ -10,6 +10,7 @@ function createData(time, amount) {
 }
 
 const data = [
+  
   createData('00:00', 0),
   createData('03:00', 300),
   createData('06:00', 600),
@@ -21,7 +22,7 @@ const data = [
   createData('24:00', undefined),
 ]; */
 
-export default function Chart() {
+export default function Benefits() {
   const theme = useTheme();
 
   return (
