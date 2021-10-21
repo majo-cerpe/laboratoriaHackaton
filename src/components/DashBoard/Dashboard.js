@@ -119,13 +119,13 @@ function DashboardContent() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              Stefanini
             </Typography>
-            <IconButton color="inherit">
+{/*             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <NotificationsActiveIcon />
               </Badge>
-            </IconButton>
+            </IconButton> */}
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
@@ -160,7 +160,7 @@ function DashboardContent() {
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={3}>
+            <Grid container spacing={4}>
               {Chart}
               <Grid item xs={12} md={8} lg={9}>
                 <Paper
@@ -181,16 +181,17 @@ function DashboardContent() {
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
+                    height: 600,
                   }}
                 >
                   <Deposits />
+                  <Divider />
                 </Paper>
               </Grid>
               {/* Recent Orders */}
-              <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <Orders />
+              <Grid item xs={12} md={8} lg={9}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240}}>
+                  <Orders /> 
                 </Paper>
               </Grid>
             </Grid>

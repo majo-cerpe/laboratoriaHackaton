@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
+import { Card, CardHeader } from '@mui/material';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
 
-// Generate Sales Data
+/* // Generate Sales Data
 function createData(time, amount) {
   return { time, amount };
 }
@@ -18,15 +19,16 @@ const data = [
   createData('18:00', 2400),
   createData('21:00', 2400),
   createData('24:00', undefined),
-];
+]; */
 
 export default function Chart() {
   const theme = useTheme();
 
   return (
     <React.Fragment>
-      <Title>Beneficios</Title>
-      <ResponsiveContainer>
+      <Title>Beneficios Stefaniner</Title>
+      
+      {/* <ResponsiveContainer>
         <LineChart
           data={data}
           margin={{
@@ -65,7 +67,7 @@ export default function Chart() {
             dot={false}
           />
         </LineChart>
-      </ResponsiveContainer>
+      </ResponsiveContainer> */}
     </React.Fragment>
   );
 }
