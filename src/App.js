@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import SignInSide from './components/SignInSide'
 import Dashboard from './components/DashBoard/Dashboard'
+import CardBenefits from './components/CardBenefits.jsx'
 
 function App() {
 	return (
@@ -16,6 +17,9 @@ function App() {
 				</Route>
 				<Route exact path="/home">
 					<Dashboard />
+				</Route>
+				<Route exact path="/benefits">
+					<CardBenefits />
 				</Route>
 			</Switch>
 		</Router>
