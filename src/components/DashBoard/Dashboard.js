@@ -19,7 +19,6 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
 import { mainListItems, secondaryListItems } from './listItems';
-import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 
@@ -161,7 +160,6 @@ function DashboardContent() {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={4}>
-              {Chart}
               <Grid item xs={12} md={8} lg={9}>
                 <Paper
                   sx={{
@@ -171,7 +169,6 @@ function DashboardContent() {
                     height: 240,
                   }}
                 >
-                  <Chart />
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
