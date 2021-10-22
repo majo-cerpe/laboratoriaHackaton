@@ -7,6 +7,8 @@ import {
 import SignInSide from './components/SignInSide'
 import Dashboard from './components/DashBoard/Dashboard'
 import AdminAsideMenu from './components/adminView/AdminAsideMenu'
+import CardBenefits from './components/CardBenefits.jsx'
+
 
 function App() {
 	return (
@@ -22,6 +24,10 @@ function App() {
 					<did>
 						<AdminAsideMenu />
 					</did>
+					</Route>
+				<Route exact path="/benefits">
+					<CardBenefits />
+
 				</Route>
 			</Switch>
 		</Router>
