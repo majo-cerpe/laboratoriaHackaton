@@ -43,7 +43,7 @@ const ArrayGrowth = ({name, description,link}) => {
         <React.Fragment>
             <h3>{name}</h3>
             <p>{description}</p>
-            <a href={link}><Button variant="contained" color="primary" size ="small">ver más</Button></a>
+            <a href={link}><Button variant="contained" color="primary" size ="small">Acceder</Button></a>
             
         </React.Fragment>
     );

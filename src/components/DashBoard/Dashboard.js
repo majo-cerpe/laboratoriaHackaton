@@ -17,9 +17,8 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-
+import WelcomeMessage from './WelcomeMessage';
 import { mainListItems, secondaryListItems } from './listItems';
-
 import Benefits from './Benefits';
 import TodoList from './TodoList';
 import Growth from './Growth';
@@ -165,6 +164,8 @@ function DashboardContent() {
             <Grid container spacing={4}>
 
               <Grid item xs={12} md={8} lg={9}>
+                <WelcomeMessage sx={{m:4}}/>
+
                 <Paper
                   sx={{
                     p: 2,
