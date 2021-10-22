@@ -13,13 +13,16 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import firabase from '../firebase'
+
 
 function Copyright(props) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
             <a color="inherit" href="https://mui.com/">
-                Your Website
+                Stefanini
             </a>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -33,36 +36,58 @@ export default function SignInSide() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        // eslint-disable-next-line no-console
+        const email = data.get('email');
+        const password = data.get('password')
         console.log({
-            email: data.get('email'),
-            password: data.get('password'),
+            email: email,
+            password: password,
         });
+
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                window.location.assign('/home')
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode);
+                if (errorCode == 'auth/user-not-found') {
+                    // eslint-disable-next-line no-alert
+                    alert('No tienes una cuenta creada, Registrate');
+                  // eslint-disable-next-line eqeqeq
+                  } else if (errorCode == 'auth/wrong-password') {
+                    // eslint-disable-next-line no-alert
+                    alert('Contraseña incorrecta');
+                  } else {
+                    // eslint-disable-next-line no-alert
+                    alert(errorMessage);
+                  }
+            });
+
     };
 
     return (
         <ThemeProvider theme={theme}>
-            <Grid container component="main" sx={{ height: '100vh' }}>
+            <Grid container component="main" sx={{ height: '60vh'} }>
                 <CssBaseline />
                 <Grid
                     item
                     xs={false}
                     sm={4}
-                    md={7}
+                    md={5}
                     sx={{
-                        backgroundImage: 'url(https://source.unsplash.com/random)',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundColor: (t) =>
-                            t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
+                       
+                        backgroundPosition: 'center'
                     }}
                 />
-                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+                <Grid item xs={6} sm={3} md={4} component={Paper} elevation={4} borderRadius="10%">
                     <Box
                         sx={{
-                            my: 8,
-                            mx: 4,
+                            my: 6,
+                            mx: 5,
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
@@ -99,28 +124,16 @@ export default function SignInSide() {
                                 control={<Checkbox value="remember" color="primary" />}
                                 label="Remember me"
                             />
-                            <Link to="/home">
                                 <Button
                                     type="submit"
                                     fullWidth
                                     variant="contained"
-                                    sx={{ mt: 3, mb: 2 }}
+                                    sx={{ mt: 3, mb: 6}}
                                 >
                                     Sign In
                                 </Button>
-                            </Link>
-                            <Grid container>
-                                <Grid item xs>
-                                    <Link to="/forgotpassword" variant="body2">
-                                        Forgot password?
-                                    </Link>
-                                </Grid>
-                                <Grid item>
-                                    <Link to="/signup" variant="body2">
-                                        {"Don't have an account? Sign Up"}
-                                    </Link>
-                                </Grid>
-                            </Grid>
+                            
+
                             <Copyright sx={{ mt: 5 }} />
                         </Box>
                     </Box>
