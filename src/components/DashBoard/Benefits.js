@@ -1,8 +1,12 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
-import { Card, CardHeader } from '@mui/material';
+import { Card, CardHeader} from '@mui/material';
+import Grid from '@mui/material/Grid'
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
+import CarouselBenefits from './CarouselBenefits';
+
+
 
 /* // Generate Sales Data
 function createData(time, amount) {
@@ -23,12 +27,15 @@ const data = [
 ]; */
 
 export default function Benefits() {
-  const theme = useTheme();
+  /* const theme = useTheme(); */
 
   return (
     <React.Fragment>
       <Title>Beneficios Stefaniner</Title>
       
+       <CarouselBenefits /> 
+      
+  
       {/* <ResponsiveContainer>
         <LineChart
           data={data}

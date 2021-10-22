@@ -20,9 +20,9 @@ import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
 import { mainListItems, secondaryListItems } from './listItems';
 import Benefits from './Benefits';
-import Deposits from './Deposits';
+import TodoList from './TodoList';
 import Orders from './Orders';
-import Carousel from './Carousel';
+import CarouselBenefits from './CarouselBenefits';
 
 function Copyright(props) {
   return (
@@ -61,7 +61,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   ({ theme, open }) => ({
     '& .MuiDrawer-paper': {
       position: 'relative',
-      whiteSpace: 'nowrap',
+      whiteSpace: 'pre-line',
       width: drawerWidth,
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
@@ -182,10 +182,10 @@ function DashboardContent() {
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 600,
+                    height: 300,
                   }}
                 >
-                  <Deposits />
+                  <TodoList />
                   <Divider />
                 </Paper>
               </Grid>
