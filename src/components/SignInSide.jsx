@@ -124,7 +124,6 @@ export default function SignInSide() {
                                 control={<Checkbox value="remember" color="primary" />}
                                 label="Remember me"
                             />
-                            <Link to="/home">
                                 <Button
                                     type="submit"
                                     fullWidth
@@ -133,7 +132,6 @@ export default function SignInSide() {
                                 >
                                     Sign In
                                 </Button>
-                            </Link>
                             
 
                             <Copyright sx={{ mt: 5 }} />
