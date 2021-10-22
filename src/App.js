@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import SignInSide from './components/SignInSide'
 import Dashboard from './components/DashBoard/Dashboard'
+import AdminAsideMenu from './components/adminView/AdminAsideMenu'
 
 function App() {
 	return (
@@ -16,6 +17,11 @@ function App() {
 				</Route>
 				<Route exact path="/home">
 					<Dashboard />
+				</Route>
+				<Route exact path="/adminView">
+					<did>
+						<AdminAsideMenu />
+					</did>
 				</Route>
 			</Switch>
 		</Router>
