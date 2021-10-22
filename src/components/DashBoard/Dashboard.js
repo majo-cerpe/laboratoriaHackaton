@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState} from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
@@ -17,13 +18,13 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-
+import WelcomeMessage from './WelcomeMessage';
 import { mainListItems, secondaryListItems } from './listItems';
-
 import Benefits from './Benefits';
 import TodoList from './TodoList';
-
-import Orders from './Orders';
+import ToDo from './ToDo';
+import AddTodoList from './AddTodoList';
+import Growth from './Growth';
 import CarouselBenefits from './CarouselBenefits';
 
 function Copyright(props) {
@@ -93,6 +94,11 @@ function DashboardContent() {
     setOpen(!open);
   };
 
+  const [texts, setTexts]= useState()
+
+function addTodo(text){
+  setTexts([text,...texts]);
+}
   return (
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
@@ -166,6 +172,8 @@ function DashboardContent() {
             <Grid container spacing={4}>
 
               <Grid item xs={12} md={8} lg={9}>
+                <WelcomeMessage sx={{m:4}}/>
+
                 <Paper
                   sx={{
                     p: 2,
@@ -188,14 +196,16 @@ function DashboardContent() {
                     height: 300,
                   }}
                 >
-                  <TodoList />
+                  <TodoList /* addTodo= {addTodo}  *//>
+                 {/*  <AddTodoList texts={texts}/> */}
+                 {/*  <ToDo /> */}
                   <Divider />
                 </Paper>
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12} md={8} lg={9}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240}}>
-                  <Orders /> 
+                  <Growth /> 
                 </Paper>
               </Grid>
             </Grid>
