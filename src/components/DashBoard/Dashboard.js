@@ -21,7 +21,7 @@ import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import { mainListItems, secondaryListItems } from './listItems';
 import Benefits from './Benefits';
 import TodoList from './TodoList';
-import Orders from './Orders';
+import Growth from './Growth';
 import CarouselBenefits from './CarouselBenefits';
 
 function Copyright(props) {
@@ -192,7 +192,7 @@ function DashboardContent() {
               {/* Recent Orders */}
               <Grid item xs={12} md={8} lg={9}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240}}>
-                  <Orders /> 
+                  <Growth /> 
                 </Paper>
               </Grid>
             </Grid>
