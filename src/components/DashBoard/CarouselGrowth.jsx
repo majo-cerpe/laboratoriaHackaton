@@ -1,3 +1,8 @@
+import React from 'react'
+import Carousel from 'react-material-ui-carousel'
+import { Paper, Button } from '@material-ui/core'
+
+
 export default function CarouselGrowth() {
 const allGrowth = [
     {
@@ -26,19 +31,19 @@ const allGrowth = [
 
 return (
     <Carousel>
-            {allBenefits.map((benefit, i) => (
-                <ArrayBenefit key={i} {...benefit} />
+            {allGrowth.map((growth, i) => (
+                <ArrayGrowth key={i} {...growth} />
             ))}
         </Carousel>
 );
 }
 
-const ArrayBenefit = ({name, description}) => {
+const ArrayGrowth = ({name, description,link}) => {
     return (
         <React.Fragment>
             <h3>{name}</h3>
             <p>{description}</p>
-            <Button variant="contained" color="primary" size ="small">ver más</Button>
+            <a href={link}><Button variant="contained" color="primary" size ="small">ver más</Button></a>
             
         </React.Fragment>
     );

@@ -6,9 +6,10 @@ import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Title from './Title';
+import CarouselGrowth from  './CarouselGrowth';
 
 // Generate Order Data
-function createData(id, date, name, shipTo, paymentMethod, amount) {
+/* function createData(id, date, name, shipTo, paymentMethod, amount) {
   return { id, date, name, shipTo, paymentMethod, amount };
 }
 
@@ -46,7 +47,7 @@ const rows = [
     'VISA ⠀•••• 5919',
     212.79,
   ),
-];
+]; */
 
 function preventDefault(event) {
   event.preventDefault();
@@ -56,7 +57,7 @@ export default function Orders() {
   return (
     <React.Fragment>
       <Title>Crecimiento</Title>
-     
+     <CarouselGrowth />
     </React.Fragment>
   );
 }
