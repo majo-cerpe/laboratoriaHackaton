@@ -1,0 +1,16 @@
+{
+	"name": "benefits",
+	"items": [
+	  {
+		"id": "birthday",
+		"image": "",
+		"bgColor": "#339933"
+	  },
+	  {
+		"id": "marriage",
+		"image": "",
+		"bgColor": "#339933"
+	  }
+	]
+  }
+  
