@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState} from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
@@ -21,6 +22,8 @@ import WelcomeMessage from './WelcomeMessage';
 import { mainListItems, secondaryListItems } from './listItems';
 import Benefits from './Benefits';
 import TodoList from './TodoList';
+import ToDo from './ToDo';
+import AddTodoList from './AddTodoList';
 import Growth from './Growth';
 import CarouselBenefits from './CarouselBenefits';
 
@@ -91,6 +94,11 @@ function DashboardContent() {
     setOpen(!open);
   };
 
+  const [texts, setTexts]= useState()
+
+function addTodo(text){
+  setTexts([text,...texts]);
+}
   return (
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
@@ -188,7 +196,9 @@ function DashboardContent() {
                     height: 300,
                   }}
                 >
-                  <TodoList />
+                  <TodoList /* addTodo= {addTodo}  *//>
+                 {/*  <AddTodoList texts={texts}/> */}
+                 {/*  <ToDo /> */}
                   <Divider />
                 </Paper>
               </Grid>

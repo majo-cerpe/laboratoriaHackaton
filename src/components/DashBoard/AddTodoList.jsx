@@ -1,24 +1,19 @@
-import React from 'react'
+/* import React, { Fragment } from 'react'
 import { Card, CardContent, Typography, Container } from "@material-ui/core";
+import ToDo from './ToDo';
 
-const AddTodoList = ({todo, todoNo}) => {
+const AddTodoList = ({ texts }) => {
     return (
-        <div>
-            <Container>
-      <Card
-        className="root"
-        variant="outlined"
-        style={{ marginTop: 35, background: "lightgray" }}
-      >
-        <CardContent>
-          <Typography variant="h5" component="h2">
-            {todoNo + 1}.&nbsp;{todo}
-          </Typography>
-        </CardContent>
-      </Card>
-    </Container>
-        </div>
-    )
-}
+        
+            <ul>
+                {texts.map(text, index =>(
+                <ToDo key ={index} text={text}/>
+                ))}
+            </ul>
+        
+        );
+    } 
+ 
 
 export default AddTodoList
+*/
