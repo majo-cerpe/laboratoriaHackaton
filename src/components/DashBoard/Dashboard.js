@@ -19,9 +19,12 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
 import { mainListItems, secondaryListItems } from './listItems';
-import Chart from './Chart';
-import Deposits from './Deposits';
+
+import Benefits from './Benefits';
+import TodoList from './TodoList';
+
 import Orders from './Orders';
+import CarouselBenefits from './CarouselBenefits';
 
 function Copyright(props) {
   return (
@@ -60,7 +63,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   ({ theme, open }) => ({
     '& .MuiDrawer-paper': {
       position: 'relative',
-      whiteSpace: 'nowrap',
+      whiteSpace: 'pre-line',
       width: drawerWidth,
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
@@ -161,7 +164,7 @@ function DashboardContent() {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={4}>
-              {Chart}
+
               <Grid item xs={12} md={8} lg={9}>
                 <Paper
                   sx={{
@@ -171,7 +174,8 @@ function DashboardContent() {
                     height: 240,
                   }}
                 >
-                  <Chart />
+                  <Benefits />
+
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
@@ -181,10 +185,10 @@ function DashboardContent() {
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 600,
+                    height: 300,
                   }}
                 >
-                  <Deposits />
+                  <TodoList />
                   <Divider />
                 </Paper>
               </Grid>

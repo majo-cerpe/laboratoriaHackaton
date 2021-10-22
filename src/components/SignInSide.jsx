@@ -13,6 +13,9 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+
 
 function Copyright(props) {
     return (
@@ -33,11 +36,37 @@ export default function SignInSide() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        // eslint-disable-next-line no-console
+        const email = data.get('email');
+        const password = data.get('password')
         console.log({
-            email: data.get('email'),
-            password: data.get('password'),
+            email: email,
+            password: password,
         });
+
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                window.location.assign('/home')
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode);
+                if (errorCode == 'auth/user-not-found') {
+                    // eslint-disable-next-line no-alert
+                    alert('No tienes una cuenta creada, Registrate');
+                  // eslint-disable-next-line eqeqeq
+                  } else if (errorCode == 'auth/wrong-password') {
+                    // eslint-disable-next-line no-alert
+                    alert('Contraseña incorrecta');
+                  } else {
+                    // eslint-disable-next-line no-alert
+                    alert(errorMessage);
+                  }
+            });
+
     };
 
     return (
@@ -106,6 +135,7 @@ export default function SignInSide() {
                                 </Button>
                             </Link>
                             
+
                             <Copyright sx={{ mt: 5 }} />
                         </Box>
                     </Box>
