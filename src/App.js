@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import SignInSide from './components/SignInSide'
 import Dashboard from './components/DashBoard/Dashboard'
-import MiPerfil from './components/DashBoard/MiPerfil'
+import AdminAsideMenu from './components/adminView/AdminAsideMenu'
 
 function App() {
 	return (
@@ -18,8 +18,10 @@ function App() {
 				<Route exact path="/home">
 					<Dashboard />
 				</Route>
-				<Route exact path="/miperfil">
-				  <MiPerfil />
+				<Route exact path="/adminView">
+					<did>
+						<AdminAsideMenu />
+					</did>
 				</Route>
 			</Switch>
 		</Router>
