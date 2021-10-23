@@ -15,6 +15,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import firabase from '../firebase'
+import { borderRadius, height } from '@mui/system';
+
 
 
 function Copyright(props) {
@@ -70,32 +72,24 @@ export default function SignInSide() {
     };
 
     return (
-        <ThemeProvider theme={theme}>
-            <Grid container component="main" sx={{ height: '60vh'} }>
-                <CssBaseline />
-                <Grid
-                    item
-                    xs={false}
-                    sm={4}
-                    md={5}
+        
+        <ThemeProvider className="theme"  theme={theme}>
+           <Grid item xs={8} sm={12} md={12}  component={Paper} elevation={4} >
+                <Box
                     sx={{
-                       
-                        backgroundPosition: 'center'
-                    }}
-                />
-                <Grid item xs={6} sm={3} md={4} component={Paper} elevation={4} borderRadius="10%">
-                    <Box
-                        sx={{
-                            my: 6,
-                            mx: 5,
+                            my: 20,
+                            mx: 20,
+                            
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
+                            height: '60%',
+                            borderRadius: '30%'
                         }}
                     >
-                        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                    <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
                             {/* <LockOutlinedIcon /> */}
-                        </Avatar>
+                    </Avatar>
                         <Typography component="h1" variant="h5">
                             Sign in
                         </Typography>
@@ -138,7 +132,8 @@ export default function SignInSide() {
                         </Box>
                     </Box>
                 </Grid>
-            </Grid>
+           
         </ThemeProvider>
+        
     );
 }
