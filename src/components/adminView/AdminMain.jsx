@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState} from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
@@ -18,14 +17,14 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-import WelcomeMessage from './WelcomeMessage';
+
 import { mainListItems, secondaryListItems } from './listItems';
+
 import Benefits from './Benefits';
 import TodoList from './TodoList';
-import ToDo from './ToDo';
-import AddTodoList from './AddTodoList';
-import Growth from './Growth';
-import CarouselBenefits from './CarouselBenefits';
+
+import Orders from './Orders';
+
 
 function Copyright(props) {
   return (
@@ -94,11 +93,6 @@ function DashboardContent() {
     setOpen(!open);
   };
 
-  const [texts, setTexts]= useState()
-
-function addTodo(text){
-  setTexts([text,...texts]);
-}
   return (
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
@@ -172,17 +166,13 @@ function addTodo(text){
             <Grid container spacing={4}>
 
               <Grid item xs={12} md={8} lg={9}>
-                <WelcomeMessage sx={{m:4}}/>
-
                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
                     height: 240,
-                    borderRadius: 4,
                   }}
-                  elevation ={12}
                 >
                   <Benefits />
 
@@ -197,19 +187,15 @@ function addTodo(text){
                     flexDirection: 'column',
                     height: 300,
                   }}
-                  elevation ={12}
                 >
-                  <TodoList /* addTodo= {addTodo}  *//>
-                 {/*  <AddTodoList texts={texts}/> */}
-                 {/*  <ToDo /> */}
+                  <TodoList />
                   <Divider />
                 </Paper>
-                
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12} md={8} lg={9}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 4}} elevation ={12}>
-                  <Growth /> 
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240}}>
+                  <Orders /> 
                 </Paper>
               </Grid>
             </Grid>

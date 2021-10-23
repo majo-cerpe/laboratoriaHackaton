@@ -9,7 +9,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-/* import LockOutlinedIcon from '@mui/icons-material/LockOutlined'; */
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
@@ -49,23 +49,28 @@ export default function SignInSide() {
             .then((userCredential) => {
                 // Signed in
                 const user = userCredential.user;
-                window.location.assign('/home')
+                if (email === 'mariajos.cerpe@gmail.com') {
+                    window.location.assign('/adminView')
+                } else {
+                    window.location.assign('/home')
+                }
+
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorCode);
-                if (errorCode == 'auth/user-not-found') {
+                if (errorCode === 'auth/user-not-found') {
                     // eslint-disable-next-line no-alert
                     alert('No tienes una cuenta creada, Registrate');
-                  // eslint-disable-next-line eqeqeq
-                  } else if (errorCode == 'auth/wrong-password') {
+                    // eslint-disable-next-line eqeqeq
+                } else if (errorCode == 'auth/wrong-password') {
                     // eslint-disable-next-line no-alert
                     alert('Contraseña incorrecta');
-                  } else {
+                } else {
                     // eslint-disable-next-line no-alert
                     alert(errorMessage);
-                  }
+                }
             });
 
     };
@@ -74,6 +79,7 @@ export default function SignInSide() {
     return (
         <ThemeProvider theme={theme}>
             <Grid container component="main" sx={{ height: '100vh' }}>
+
                 <CssBaseline />
                 <Grid
                     item
@@ -81,6 +87,7 @@ export default function SignInSide() {
                     sm={4}
                     md={7}
                     sx={{
+                        
                         backgroundImage: `url(${Image})`,
                         backgroundRepeat: 'no-repeat',
                         backgroundSize: 'cover',
@@ -100,7 +107,7 @@ export default function SignInSide() {
                         }}
                     >
                         <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                            {/* <LockOutlinedIcon /> */}
+                            <LockOutlinedIcon />
                         </Avatar>
                         <Typography component="h1" variant="h5">
                             Sign in
@@ -140,6 +147,7 @@ export default function SignInSide() {
                                     Sign In
                                 </Button>
                             </Link>
+
                             <Copyright sx={{ mt: 5 }} />
                         </Box>
                     </Box>

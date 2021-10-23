@@ -17,15 +17,15 @@ import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-import WelcomeMessage from './WelcomeMessage';
-import { mainListItems, secondaryListItems } from './listItems';
-import Benefits from './Benefits';
-import TodoList from './TodoList';
-import ToDo from './ToDo';
-import AddTodoList from './AddTodoList';
-import Growth from './Growth';
-import CarouselBenefits from './CarouselBenefits';
+import { mainListItems, secondaryListItems } from '../DashBoard/listItems';
+import AvatarProfile from './AvatarProfile';
+import Stack from '@mui/material/Stack'
+import InfoUser from './InfoUser';
+import MiPerfilText from './MiPerfilText';
+import EditPerfilText from './EditPerfilText';
+import UserInfoFinished from './UserInfoFinished';
+
+
 
 function Copyright(props) {
   return (
@@ -155,6 +155,7 @@ function addTodo(text){
           <Divider />
           <List>{secondaryListItems}</List>
         </Drawer>
+
         <Box
           component="main"
           sx={{
@@ -168,50 +169,117 @@ function addTodo(text){
           }}
         >
           <Toolbar />
+          <MiPerfilText sx={{ mr:4}}/>
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={4}>
 
               <Grid item xs={12} md={8} lg={9}>
-                <WelcomeMessage sx={{m:4}}/>
+               
 
                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
-                    borderRadius: 4,
+                    height: 680,
+                    borderRadius: 8
                   }}
                   elevation ={12}
                 >
-                  <Benefits />
+        {/* caja y componente edita tu perfil */}
+        <Box 
+          p={0}
+          display= 'flex'
+          justifyContent= 'center'
+            >
+                <EditPerfilText />
+            </Box>
+
+            {/* caja y componente avatar */}
+                  <Box 
+         /*  bgcolor="primary.main"
+          color="primary.contrastText" */
+          p={2}
+          display= 'flex'
+          justifyContent= 'center'
+            >
+                <Stack direction="row" spacing={2}>
+                  <AvatarProfile 
+                  src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png"
+                   sx={{width: 70, heigh: 70, /* display: 'flex',flexDirection: 'column' */ }}
+                   />
+                   </Stack>
+            
+                   </Box>
+            {/*Termina  caja y componente avatar */}
+
+            {/*Empieza  caja y componente InfoUser */}
+            <Box
+      component="form"
+ /*      bgcolor="secondary.main"
+      color="secondary.contrastText" */
+      mt={4}
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+                   <InfoUser />
+                   </Box>
 
                 </Paper>
               </Grid>
-              {/* Recent Deposits */}
+
+              {/* VISTA PERFIL */}
               <Grid item xs={12} md={4} lg={3}>
                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 300,
+                    height: 400,
                   }}
                   elevation ={12}
                 >
-                  <TodoList /* addTodo= {addTodo}  *//>
-                 {/*  <AddTodoList texts={texts}/> */}
-                 {/*  <ToDo /> */}
-                  <Divider />
+                    {/*Empieza  caja y componente Avatar */}
+                         <Box 
+         /*  bgcolor="primary.main"
+          color="primary.contrastText" */
+          p={2}
+          display= 'flex'
+          justifyContent= 'center'
+            >
+                <Stack direction="row" spacing={2}>
+                  <AvatarProfile 
+                  src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png"
+                   sx={{width: 60, heigh: 60, /* display: 'flex',flexDirection: 'column' */ }}
+                   />
+                   </Stack>
+            
+                   </Box>
+
+                   {/*Empieza  caja y componente UserInfoFinished*/}
+                   <Box 
+          bgcolor="primary.main"
+          color="primary.contrastText" 
+          p={1}
+          display= 'flex'
+          justifyContent= 'center'
+          sx={{
+            height: 300,
+          }}
+            >
+                   <UserInfoFinished/>
+                   </Box>
                 </Paper>
-                
               </Grid>
               {/* Recent Orders */}
-              <Grid item xs={12} md={8} lg={9}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 4}} elevation ={12}>
-                  <Growth /> 
+{/*               <Grid item xs={12} md={8} lg={9}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240}} elevation ={12}>
+               
                 </Paper>
-              </Grid>
+              </Grid> */}
             </Grid>
             <Copyright sx={{ pt: 4 }} />
           </Container>
@@ -224,3 +292,6 @@ function addTodo(text){
 export default function Dashboard() {
   return <DashboardContent />;
 }
+
+
+
