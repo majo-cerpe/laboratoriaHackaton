@@ -79,7 +79,6 @@ export default function SignInSide() {
                     sx={{
                             my: 20,
                             mx: 20,
-                            
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
