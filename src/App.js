@@ -7,7 +7,7 @@ import {
 import SignInSide from './components/SignInSide'
 import Dashboard from './components/DashBoard/Dashboard'
 import AdminAsideMenu from './components/adminView/AdminAsideMenu'
-import CardBenefits from './components/CardBenefits.jsx'
+import CardBenefits from './components/benefits/CardBenefits'
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 						<AdminAsideMenu />
 					</did>
 					</Route>
-				<Route exact path="/benefits">
+				<Route exact path="/beneficios">
 					<CardBenefits />
 
 				</Route>
