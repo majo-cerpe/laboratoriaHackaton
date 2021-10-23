@@ -7,11 +7,15 @@ import {
 import SignInSide from './components/SignInSide'
 import Dashboard from './components/DashBoard/Dashboard'
 import AdminAsideMenu from './components/adminView/AdminAsideMenu'
+
+import ContainerCards from './components/benefits/ContainerCards'
+
 import AdminDashboard from './components/adminView/menuOptionComponents/AdminDashboard'
 import UserAdmin from './components/adminView/menuOptionComponents/UserAdmin';
 import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdmin';
 import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
 import MiPerfil from './components/MiPerfilView/MiPerfil'
+
 
 
 function App() {
@@ -50,6 +54,12 @@ function App() {
 				<Route exact path="/benefitAdmin">
 					<div className="userAdmin">
 						<AdminAsideMenu />
+
+					</div>
+					</Route>
+				<Route exact path="/beneficios">
+					<ContainerCards />
+
 						<div className="userAdminMain" >
 							<BenefitAdmin />
 						</div>
@@ -67,6 +77,7 @@ function App() {
 				</Route>
 				<Route exact path="/perfil">
 					<MiPerfil />
+
 				</Route>
 			</Switch>
 		</Router>
