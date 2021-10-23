@@ -34,7 +34,7 @@ const UserAdmin = () => {
 
     return (
         <div>
-            <h1>Administrador de Usuarios</h1>
+            <h3>Administrador de Usuarios</h3>
             <div style={{ height: 600, width: '80%' }}>
 
                 <DataGrid

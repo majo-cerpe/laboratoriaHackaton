@@ -3,7 +3,7 @@ import React from 'react'
 const BenefitAdmin = () => {
     return (
         <div>
-            Administración de beneficios
+            <h3>Administración de beneficios</h3>
         </div>
     )
 }
