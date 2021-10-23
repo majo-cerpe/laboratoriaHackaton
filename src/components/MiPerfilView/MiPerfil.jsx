@@ -181,7 +181,7 @@ function addTodo(text){
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 600,
+                    height: 680,
                     borderRadius: 8
                   }}
                   elevation ={12}
@@ -206,7 +206,7 @@ function addTodo(text){
                 <Stack direction="row" spacing={2}>
                   <AvatarProfile 
                   src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png"
-                   sx={{width: 88, heigh: 88, /* display: 'flex',flexDirection: 'column' */ }}
+                   sx={{width: 70, heigh: 70, /* display: 'flex',flexDirection: 'column' */ }}
                    />
                    </Stack>
             
@@ -263,7 +263,7 @@ function addTodo(text){
                    <Box 
           bgcolor="primary.main"
           color="primary.contrastText" 
-          p={2}
+          p={1}
           display= 'flex'
           justifyContent= 'center'
           sx={{
