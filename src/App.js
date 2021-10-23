@@ -7,7 +7,15 @@ import {
 import SignInSide from './components/SignInSide'
 import Dashboard from './components/DashBoard/Dashboard'
 import AdminAsideMenu from './components/adminView/AdminAsideMenu'
+
 import ContainerCards from './components/benefits/ContainerCards'
+
+import AdminDashboard from './components/adminView/menuOptionComponents/AdminDashboard'
+import UserAdmin from './components/adminView/menuOptionComponents/UserAdmin';
+import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdmin';
+import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
+import MiPerfil from './components/MiPerfilView/MiPerfil'
+
 
 
 function App() {
@@ -21,12 +29,54 @@ function App() {
 					<Dashboard />
 				</Route>
 				<Route exact path="/adminView">
-					<did>
+					<div>
 						<AdminAsideMenu />
-					</did>
+					</div>
+				</Route>
+				<Route exact path="/adminDashboard">
+					<div className="userAdmin">
+						<AdminAsideMenu />
+						<div className="userAdminMain" >
+							<AdminDashboard />
+						</div>
+					</div>
+
+				</Route>
+				<Route exact path="/userAdmin">
+					<div className="userAdmin">
+						<AdminAsideMenu />
+						<div className="userAdminMain" >
+							<UserAdmin />
+						</div>
+					</div>
+
+				</Route>
+				<Route exact path="/benefitAdmin">
+					<div className="userAdmin">
+						<AdminAsideMenu />
+
+					</div>
 					</Route>
 				<Route exact path="/beneficios">
 					<ContainerCards />
+
+						<div className="userAdminMain" >
+							<BenefitAdmin />
+						</div>
+					</div>
+
+				</Route>
+				<Route exact path="/partnershipAdmin">
+					<div className="userAdmin">
+						<AdminAsideMenu />
+						<div className="userAdminMain" >
+							<PartnershipAdmin />
+						</div>
+					</div>
+
+				</Route>
+				<Route exact path="/perfil">
+					<MiPerfil />
 
 				</Route>
 			</Switch>
