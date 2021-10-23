@@ -14,8 +14,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import firabase from '../firebase'
-import { borderRadius, height } from '@mui/system';
+import Image from "../assest/stefaninifondo.jpg"
 
 
 
@@ -71,24 +70,38 @@ export default function SignInSide() {
 
     };
 
+
     return (
-        
-        <ThemeProvider className="theme"  theme={theme}>
-           <Grid item xs={8} sm={12} md={12}  component={Paper} elevation={4} >
-                <Box
+        <ThemeProvider theme={theme}>
+            <Grid container component="main" sx={{ height: '100vh' }}>
+                <CssBaseline />
+                <Grid
+                    item
+                    xs={false}
+                    sm={4}
+                    md={7}
                     sx={{
-                            my: 20,
-                            mx: 20,
+                        backgroundImage: `url(${Image})`,
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'cover',
+                       
+                    }}
+                />
+                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+                    <Box
+                        sx={{
+                            my: 8,
+                            mx: 4,
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
-                            height: '60%',
-                            borderRadius: '30%'
+                            backgroundColor: '	#7B68EE'
+                           	
                         }}
                     >
-                    <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
                             {/* <LockOutlinedIcon /> */}
-                    </Avatar>
+                        </Avatar>
                         <Typography component="h1" variant="h5">
                             Sign in
                         </Typography>
@@ -117,22 +130,21 @@ export default function SignInSide() {
                                 control={<Checkbox value="remember" color="primary" />}
                                 label="Remember me"
                             />
+                            <Link to="/home">
                                 <Button
                                     type="submit"
                                     fullWidth
                                     variant="contained"
-                                    sx={{ mt: 3, mb: 6}}
+                                    sx={{ mt: 3, mb: 2 }}
                                 >
                                     Sign In
                                 </Button>
-                            
-
+                            </Link>
                             <Copyright sx={{ mt: 5 }} />
                         </Box>
                     </Box>
                 </Grid>
-           
+            </Grid>
         </ThemeProvider>
-        
     );
-}
+} 

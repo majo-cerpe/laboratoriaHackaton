@@ -5,12 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    background-image:  url('./assest/Fondostefanini.png');
-    width: 100vh;
-    height: 100vh; 
-    background-position: "no-repeat" ;
-    background-size: cover;
-    background-position: "center";  
+   
     }
 
 code {
