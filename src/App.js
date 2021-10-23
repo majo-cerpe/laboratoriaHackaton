@@ -11,6 +11,8 @@ import AdminDashboard from './components/adminView/menuOptionComponents/AdminDas
 import UserAdmin from './components/adminView/menuOptionComponents/UserAdmin';
 import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdmin';
 import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
+import MiPerfil from './components/MiPerfilView/MiPerfil'
+
 
 function App() {
 	return (
@@ -62,6 +64,9 @@ function App() {
 						</div>
 					</div>
 
+				</Route>
+				<Route exact path="/perfil">
+					<MiPerfil />
 				</Route>
 			</Switch>
 		</Router>
