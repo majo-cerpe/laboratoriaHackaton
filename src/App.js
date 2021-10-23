@@ -7,6 +7,8 @@ import {
 import SignInSide from './components/SignInSide'
 import Dashboard from './components/DashBoard/Dashboard'
 import AdminAsideMenu from './components/adminView/AdminAsideMenu'
+import MiPerfil from './components/MiPerfilView/MiPerfil'
+
 
 function App() {
 	return (
@@ -22,6 +24,9 @@ function App() {
 					<did>
 						<AdminAsideMenu />
 					</did>
+				</Route>
+				<Route exact path="/perfil">
+					<MiPerfil />
 				</Route>
 			</Switch>
 		</Router>
