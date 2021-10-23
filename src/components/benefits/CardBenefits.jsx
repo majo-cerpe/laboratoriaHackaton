@@ -7,6 +7,8 @@ import { CardActionArea } from '@mui/material';
 
 
 
+
+
 const CardBenefits = ({title, description, image, text, secondaryText }) => {
 	
 	return (
@@ -22,7 +24,7 @@ const CardBenefits = ({title, description, image, text, secondaryText }) => {
 			  <Typography gutterBottom variant="h5" component="div">
 				{title}
 			  </Typography>
-			  <Typography variant="body2" color="text.secondary">
+			  <Typography component="p" variant="h6" color="text.secondary">
 				{description}
 			  </Typography>
 			  <Typography variant="body2" color="text.secondary">
