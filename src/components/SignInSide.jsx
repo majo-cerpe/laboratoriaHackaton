@@ -49,11 +49,10 @@ export default function SignInSide() {
                 // Signed in
                 const user = userCredential.user;
                 if (email === 'mariajos.cerpe@gmail.com') {
-                    window.location.assign('/adminViewDashbord')
+                    window.location.assign('/adminViewDashboard')
                 } else {
                     window.location.assign('/home')
                 }
-
             })
             .catch((error) => {
                 const errorCode = error.code;
