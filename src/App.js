@@ -7,7 +7,7 @@ import {
 import SignInSide from './components/SignInSide'
 import Dashboard from './components/DashBoard/Dashboard'
 import AdminAsideMenu from './components/adminView/AdminAsideMenu'
-import CardBenefits from './components/benefits/CardBenefits'
+import ContainerCards from './components/benefits/ContainerCards'
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
 					</did>
 					</Route>
 				<Route exact path="/beneficios">
-					<CardBenefits />
+					<ContainerCards />
 
 				</Route>
 			</Switch>
