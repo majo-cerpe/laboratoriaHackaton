@@ -25,23 +25,31 @@ function App() {
 				<Route exact path="/">
 					<SignInSide />
 				</Route>
+				
 				<Route exact path="/home">
 					<Dashboard />
 				</Route>
-				<Route exact path="/adminView">
-					<div>
-						<AdminAsideMenu />
-					</div>
+
+				<Route exact path="/perfil">
+					<MiPerfil />
 				</Route>
-				<Route exact path="/adminDashboard">
+
+				<Route exact path="/beneficios">
+					<ContainerCards />
+				</Route>
+
+
+				{/*vista admin - inicio(dashboard)*/}
+				<Route exact path="/adminViewDashboard">
 					<div className="userAdmin">
 						<AdminAsideMenu />
 						<div className="userAdminMain" >
 							<AdminDashboard />
 						</div>
 					</div>
-
 				</Route>
+
+				{/*vista admin - administración de usuarios*/}
 				<Route exact path="/userAdmin">
 					<div className="userAdmin">
 						<AdminAsideMenu />
@@ -49,23 +57,19 @@ function App() {
 							<UserAdmin />
 						</div>
 					</div>
-
 				</Route>
+
+				{/*vista admin - beneficios*/}
 				<Route exact path="/benefitAdmin">
 					<div className="userAdmin">
 						<AdminAsideMenu />
-
-					</div>
-					</Route>
-				<Route exact path="/beneficios">
-					<ContainerCards />
-
 						<div className="userAdminMain" >
 							<BenefitAdmin />
 						</div>
 					</div>
-
 				</Route>
+
+				{/*vista admin - convenios*/}
 				<Route exact path="/partnershipAdmin">
 					<div className="userAdmin">
 						<AdminAsideMenu />
@@ -73,12 +77,8 @@ function App() {
 							<PartnershipAdmin />
 						</div>
 					</div>
-
 				</Route>
-				<Route exact path="/perfil">
-					<MiPerfil />
 
-				</Route>
 			</Switch>
 		</Router>
 	);
