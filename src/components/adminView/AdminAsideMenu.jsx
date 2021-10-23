@@ -14,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 
 
-import { mainListItems, secondaryListItems } from './listItems';
+import { mainListItems, secondaryListItems } from './AdminMenuItems';
 
 
 
