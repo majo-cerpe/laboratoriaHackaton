@@ -11,7 +11,9 @@ import AdminAsideMenu from './components/adminView/AdminAsideMenu'
 import ContainerCards from './components/benefits/ContainerCards'
 
 import AdminDashboard from './components/adminView/menuOptionComponents/AdminDashboard'
-import UserAdmin from './components/adminView/menuOptionComponents/UserAdmin';
+import UserAdmin from './components/adminView/menuOptionComponents/userAdmin/UserAdmin';
+import UserAdd from './components/adminView/menuOptionComponents/userAdmin/UserAdd'
+import UsersTable from './components/adminView/menuOptionComponents/userAdmin/UsersTable'
 import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdmin';
 import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
 import MiPerfil from './components/MiPerfilView/MiPerfil'
@@ -50,6 +52,28 @@ function App() {
 				</Route>
 
 				{/*vista admin - administración de usuarios*/}
+				<Route exact path="/userAdmin/Add">
+					<div className="userAdmin">
+						<AdminAsideMenu />
+						<div className="userAdminMain" >
+							<UserAdmin />
+							<UserAdd />
+						</div>
+					</div>
+				</Route>
+
+				{/*vista admin - Agregar Usuario*/}
+				<Route exact path="/userAdmin/editOrDelete">
+					<div className="userAdmin">
+						<AdminAsideMenu />
+						<div className="userAdminMain" >
+							<UserAdmin />
+							<UsersTable />
+						</div>
+					</div>
+				</Route>
+
+				{/*vista admin - Editar o borrar usuarios*/}
 				<Route exact path="/userAdmin">
 					<div className="userAdmin">
 						<AdminAsideMenu />
