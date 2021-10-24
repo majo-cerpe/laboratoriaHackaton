@@ -8,14 +8,17 @@ export default function CarouselBenefits() {
         {
             name: 'Matrimonio',
             description: 'Bono por Matrimonio Unión civil $100.000 bruto',
+            image:"",
         },
         {
             name: 'Cumpleaños',
             description: 'Si tu cumpleaños cae fin de semana o feriado, puedes tomar la tarde dentro del mes',
+            image:"",
         },
         {
             name: 'Nacimiento',
             description: 'Bono por Nacimiento de un hijo $100.000 bruto',
+            image:"",
         },
     ];
 

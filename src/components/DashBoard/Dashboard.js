@@ -180,7 +180,9 @@ function addTodo(text){
                     display: 'flex',
                     flexDirection: 'column',
                     height: 240,
+                    borderRadius: 4,
                   }}
+                  elevation ={12}
                 >
                   <Benefits />
 
@@ -195,16 +197,18 @@ function addTodo(text){
                     flexDirection: 'column',
                     height: 300,
                   }}
+                  elevation ={12}
                 >
                   <TodoList /* addTodo= {addTodo}  *//>
                  {/*  <AddTodoList texts={texts}/> */}
                  {/*  <ToDo /> */}
                   <Divider />
                 </Paper>
+                
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12} md={8} lg={9}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240}}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 4}} elevation ={12}>
                   <Growth /> 
                 </Paper>
               </Grid>
