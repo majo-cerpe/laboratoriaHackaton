@@ -3,6 +3,7 @@
     padding-bottom: 8px;
     padding-right: 16px;
     padding-left: 24px;
+    width: 239px;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -36,3 +37,10 @@
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
 }
+
+.button:hover {
+    background-color: #70b5e0;
+    color: white;
+  }
+
+  
