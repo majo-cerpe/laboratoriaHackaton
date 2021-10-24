@@ -53,11 +53,21 @@ const UsersTable = () => {
             >
                 <Stack direction="row" spacing={30}>
                     <Stack direction="row" spacing={2}>
-                        <TextField id="outlined-basic" label="Ingrese nombre" variant="outlined" />
+                        <TextField 
+                        id="outlined-size-small" 
+                        size="small" 
+                        label="Ingrese nombre" 
+                        variant="outlined" 
+                        />
                         <button variant="contained" className="userAdminbutton">Buscar por nombre</button>
                     </Stack>
                     <Stack direction="row" spacing={2}>
-                        <TextField id="outlined-basic" label="Ingrese apellido" variant="outlined" />
+                        <TextField 
+                        id="outlined-size-small" 
+                        size="small" 
+                        label="Ingrese apellido" 
+                        variant="outlined" 
+                        />
                         <button variant="contained" className="userAdminbutton">Buscar por apellido</button>
                     </Stack>
                 </Stack>
