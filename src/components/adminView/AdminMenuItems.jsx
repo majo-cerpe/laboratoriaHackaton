@@ -48,7 +48,7 @@ export const mainListItems = (
 export const secondaryListItems = (
 	<div>
 		<ListSubheader inset>Otra sección</ListSubheader>
-		<a component="a" className="button">
+		<a component="a" href="/adminViewDashboard" className="button">
 			<ListItemIcon>
 				<AssignmentIcon />
 			</ListItemIcon>
