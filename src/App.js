@@ -21,9 +21,9 @@ function App() {
 					<Dashboard />
 				</Route>
 				<Route exact path="/adminView">
-					<did>
+					<div>
 						<AdminAsideMenu />
-					</did>
+					</div>
 					</Route>
 				<Route exact path="/beneficios">
 					<ContainerCards />
