@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { collection, getDocs } from "firebase/firestore";
-import db from '../../../firebase'
+import { db } from '../../../firebase'
 import { Grid } from '@mui/material'
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
@@ -14,11 +14,6 @@ const BenefitAdmin = () => {
 	const [description, setDescription] = React.useState('');
 	const [text, setText] = React.useState('');
 	const [secondaryText, setSecondaryText] = React.useState('');
-
-
-
-
-
 	const [task, setTask] = React.useState([])
 
 	React.useEffect(() => {
@@ -35,8 +30,6 @@ const BenefitAdmin = () => {
 		}
 		bringData()
 	}, [])
-
-
 
 	return (
 		<Fragment>

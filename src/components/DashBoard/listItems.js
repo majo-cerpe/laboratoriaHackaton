@@ -16,16 +16,8 @@ export const mainListItems = (
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" />
+      <ListItemText primary="Inicio" />
     </a>
-
-    <a component="a" href="/home" className="button">
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="lorem" />
-    </a>
-
     <a component="a" href="/Perfil" className="button">
       <ListItemIcon>
         <PeopleIcon />
@@ -33,18 +25,19 @@ export const mainListItems = (
       <ListItemText primary="Perfil" />
     </a>
 
-    <a component="a" href="/home" className="button">
+    <a component="a" href="/stefaniners" className="button">
+      <ListItemIcon>
+        <DashboardIcon />
+      </ListItemIcon>
+      <ListItemText primary="Momentos Stefaniners" />
+    </a>
+
+
+    <a component="a" href="/rrhh" className="button">
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
-      <ListItemText primary="lorem" />
-    </a>
-
-    <a component="a" href="/home" className="button">
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="lorem" />
+      <ListItemText primary="Recursos humanos" />
     </a>
 
   </div>
@@ -54,7 +47,7 @@ export const secondaryListItems = (
   <div>
     <ListSubheader inset>Otra sección</ListSubheader>
 
-    <a component="a" href="/beneficios" className="button">
+    <a component="a" href="/benefits" className="button">
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>

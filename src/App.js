@@ -40,12 +40,16 @@ function App() {
 					<MiPerfil />
 				</Route>
 
-				<Route exact path="/beneficios">
+				<Route exact path="/benefits">
 					<ContainerCards />
 				</Route>
-
+				
 				<Route exact path="/rrhh">
 					<RhhView />
+				</Route>
+				<Route exact path="/stefaniners">
+						<Stefaniners />
+
 				</Route>
 
 				{/*vista admin - inicio(dashboard)*/}
@@ -127,15 +131,7 @@ function App() {
 					</div>
 
 				</Route>
-				<Route exact path="/perfil">
-					<MiPerfil />
-				</Route>
-
-				<Route exact path="/stefaniners">
-					<div>
-						<Stefaniners />
-					</div>
-				</Route>
+				
 				
 			</Switch>
 		</Router >
