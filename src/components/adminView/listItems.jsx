@@ -49,6 +49,13 @@ export const mainListItems = (
 				</ListItemIcon>
 				<ListItemText primary="Administración de Convenios" />
 			</a>
+
+			<a component="a" href="/moments" className="button">
+				<ListItemIcon>
+					<SavingsIcon />
+				</ListItemIcon>
+				<ListItemText primary="Momentos Stefaniners" />
+			</a>
 	
 
 

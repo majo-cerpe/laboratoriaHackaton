@@ -11,7 +11,9 @@ import AdminDashboard from './components/adminView/menuOptionComponents/AdminDas
 import UserAdmin from './components/adminView/menuOptionComponents/UserAdmin';
 import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdmin';
 import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
+import Moments from './components/adminView/menuOptionComponents/Moments'
 import MiPerfil from './components/MiPerfilView/MiPerfil'
+import Stefaniners from  './components/Momentos/Stefaniners';
 
 
 function App() {
@@ -63,13 +65,29 @@ function App() {
 							<PartnershipAdmin />
 						</div>
 					</div>
+					</Route>
+					<Route exact path="/moments">
+					<div className="userAdmin">
+						<AdminAsideMenu />
+						<div className="userAdminMain" >
+							<Moments />
+						</div>
+					</div>
 
 				</Route>
 				<Route exact path="/perfil">
 					<MiPerfil />
 				</Route>
+
+				<Route exact path="/stefaniners">
+					<div>
+						<Stefaniners />
+					</div>
+				</Route>
 			</Switch>
 		</Router>
+	
+			
 	);
 }
 
