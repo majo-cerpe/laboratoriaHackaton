@@ -1,6 +1,5 @@
 import React, { Fragment }  from 'react'
-import { collection, getDocs } from "firebase/firestore";
-import db from '../../../firebase'
+
 import { Grid } from '@mui/material'
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
@@ -15,28 +14,6 @@ const BenefitAdmin = () => {
     const [text, setText] = React.useState('');
     const [secondaryText, setSecondaryText] = React.useState('');
 
-
-    
-
-
-   	const [task, setTask] = React.useState([])
-	
-	React.useEffect(() => {
-
-		const bringData = async ()=> {
-	try {
-	
-		const data = await getDocs(collection(db, "benefits"));
-		const arrayData = data.docs.map(doc => ({id:doc.id, ...doc.data() }))
-		setTask(arrayData)
-	} catch (error) {
-		console.log(error);
-	}
-		}
-		bringData()
-	}, [])
-
-   
    
     return (
         <Fragment> 
@@ -56,6 +33,7 @@ const BenefitAdmin = () => {
       noValidate
       autoComplete="off"
     >
+      
       <div>
         <TextField
           id="outlined-multiline-flexible"

@@ -30,7 +30,7 @@ const CardBenefits = () => {
   return (
     <ul>
       {task.map((item) => (
-        <li key={item.id}>
+        <li key={item}>
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
