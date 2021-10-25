@@ -8,6 +8,7 @@ import SignInSide from './components/SignInSide'
 import Dashboard from './components/DashBoard/Dashboard'
 import AdminAsideMenu from './components/adminView/AdminAsideMenu'
 import MiPerfil from './components/MiPerfilView/MiPerfil'
+import RhhView from './components/RRHHView/RhhView';
 import ContainerCards from './components/benefits/ContainerCards'
 
 import AdminDashboard from './components/adminView/menuOptionComponents/AdminDashboard'
@@ -17,7 +18,6 @@ import UsersTable from './components/adminView/menuOptionComponents/userAdmin/Us
 import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdmin';
 import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
 import StickyFooter from './components/adminView/StickyFooter';
-
 
 
 
@@ -41,6 +41,9 @@ function App() {
 					<ContainerCards />
 				</Route>
 
+				<Route exact path="/rrhh">
+					<RhhView />
+				</Route>
 
 				{/*vista admin - inicio(dashboard)*/}
 				<Route exact path="/adminViewDashboard">
