@@ -122,7 +122,6 @@ const AdminAsideMenu = () => {
 					<Divider />
 					<List>{secondaryListItems}</List>
 				</Drawer>
-	
 			</Box>
 		</ThemeProvider>
 

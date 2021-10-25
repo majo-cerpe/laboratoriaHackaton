@@ -15,18 +15,15 @@ import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-import { mainListItems, secondaryListItems } from './';
+import { mainListItems, secondaryListItems } from '../DashBoard/listItems';
 
-
-
-
-
+   
 function Copyright(props) {
 	return (
 		<Typography variant="body2" color="text.secondary" align="center" {...props}>
 			{'Copyright © '}
 			<Link color="inherit" href="https://mui.com/">
-				Your Website
+				Stefanini
 			</Link>{' '}
 			{new Date().getFullYear()}
 			{'.'}
@@ -90,7 +87,7 @@ function AdminAsideMenuContent() {
 
 	return (
 		<ThemeProvider theme={mdTheme}>
-			<Box sx={{ display: 'flex' }}>
+            <Box sx={{ display: 'flex' }}>
 				<CssBaseline />
 				<AppBar position="absolute" open={open}>
 					<Toolbar
@@ -117,7 +114,10 @@ function AdminAsideMenuContent() {
 							noWrap
 							sx={{ flexGrow: 1 }}
 						>
-							Stefanini
+						<Toolbar>
+                        <img src="logoenblanco.png"  />
+                    </Toolbar>
+
 						</Typography>
 
 					</Toolbar>
@@ -140,7 +140,13 @@ function AdminAsideMenuContent() {
 					<Divider />
 					<List>{secondaryListItems}</List>
 				</Drawer>
-			</Box>
+			</Box> 
+            <Grid item xs={12} md={8} lg={9} component={Paper} elevation={6} square>
+                <Box>
+                        <h1>Momentos Stefaniners</h1>
+                </Box>
+            </Grid>
+           
 		</ThemeProvider>
 	);
 }
@@ -148,3 +154,4 @@ function AdminAsideMenuContent() {
 export default function AdminAsideMenu() {
 	return <AdminAsideMenuContent />;
 }
+
