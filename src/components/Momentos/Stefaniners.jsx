@@ -16,6 +16,7 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import { mainListItems, secondaryListItems } from '../DashBoard/listItems';
+import PhotoStefaniners from  './PhotoStefaniners'
 
    
 function Copyright(props) {
@@ -84,7 +85,8 @@ function AdminAsideMenuContent() {
 	const toggleDrawer = () => {
 		setOpen(!open);
 	};
-
+   
+    
 	return (
 		<ThemeProvider theme={mdTheme}>
             <Box sx={{ display: 'flex' }}>
@@ -115,10 +117,9 @@ function AdminAsideMenuContent() {
 							sx={{ flexGrow: 1 }}
 						>
 						<Toolbar>
-                        <img src="logoenblanco.png"  />
+                   stefanini
                     </Toolbar>
-
-						</Typography>
+                		</Typography>
 
 					</Toolbar>
 				</AppBar>
@@ -140,13 +141,7 @@ function AdminAsideMenuContent() {
 					<Divider />
 					<List>{secondaryListItems}</List>
 				</Drawer>
-			</Box> 
-            <Grid item xs={12} md={8} lg={9} component={Paper} elevation={6} square>
-                <Box>
-                        <h1>Momentos Stefaniners</h1>
-                </Box>
-            </Grid>
-           
+			</Box>    
 		</ThemeProvider>
 	);
 }

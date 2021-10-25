@@ -19,6 +19,7 @@ import UsersTable from './components/adminView/menuOptionComponents/userAdmin/Us
 import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdmin';
 import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
 import StickyFooter from './components/adminView/StickyFooter';
+import PhotoStefaniners from './components/Momentos/PhotoStefaniners'
 
 
 
@@ -98,7 +99,6 @@ function App() {
 					<StickyFooter />
 				</Route>
 
-
 				{/*vista admin - beneficios*/}
 				<Route exact path="/benefitAdmin">
 					<div className="userAdmin">
@@ -121,7 +121,6 @@ function App() {
 					<StickyFooter />
 				</Route>
 
-
 				<Route exact path="/momentsAdmin">
 					<div className="userAdmin">
 						<AdminAsideMenu />
@@ -129,9 +128,20 @@ function App() {
 							<Moments />
 						</div>
 					</div>
-
 				</Route>
 				
+				<Route exact path="/perfil">
+					<MiPerfil />
+				</Route>
+
+				<Route exact path="/stefaniners">
+					<div>
+						<Stefaniners />
+						<div>
+							<PhotoStefaniners />
+						</div>
+					</div>
+				</Route>
 				
 			</Switch>
 		</Router >
