@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 
-const allOptions = [
+const childAllOptions = [
     {
         value: 'No tengo hijos',
         label: 'No tengo hijos',
@@ -35,23 +35,58 @@ const allOptions = [
     },
 ];
 
+const tshirtSizeAllOptions = [
+    {
+        value: '',
+        label: '',
+    },
+    {
+        value: 'XS',
+        label: 'XS',
+    },
+    {
+        value: 'S',
+        label: 'S',
+    },
+    {
+        value: 'M',
+        label: 'M',
+    },
+    {
+        value: 'L',
+        label: 'L',
+    },
+    {
+        value: 'XL',
+        label: 'XL',
+    },
+    {
+        value: '2XL',
+        label: '2XL',
+    },
+];
+
 
 const UserAdd = () => {
     const [childOptions, setChildOptions] = React.useState('No tengo hijos');
+    const [tshirtSize, setTshirtSize] = React.useState('');
 
-    const handleChange = (event) => {
+    const childHandleChange = (event) => {
         setChildOptions(event.target.value);
     };
+
+    const tshirtHandleChange = (event) => {
+        setTshirtSize(event.target.value);
+    };
+
     return (
         <Paper
             sx={{
                 p: 2,
                 display: 'flex',
                 flexDirection: 'column',
-                height: 550,
-                width: 510,
                 borderRadius: 2,
-                margin: 5,
+                margin: 3,
             }}
             elevation={12}
         >
@@ -61,13 +96,14 @@ const UserAdd = () => {
                      color="secondary.contrastText" */
                 mt={4}
                 sx={{
+                    margin:0,
                     '& .MuiTextField-root': { m: 1, width: '25ch' },
                 }}
                 noValidate
                 autoComplete="off"
             >
                 <Fragment>
-                    <div>  
+                    <div className="addUserInputs">  
                         <TextField
                             required
                             id="outlined-required"
@@ -91,21 +127,33 @@ const UserAdd = () => {
                         <TextField
                             id="outlined"
                             label="correo electrónico"
-                            helperText="correo institucional"
+                        />
+                        <TextField
+                            id="outlined"
+                            label="Contraseña temporal"
                         />
                         <TextField
                             id="outlined"
                             label="Pronombres"
-                            helperText="ej. ella/el/otro"
+                            helperText="ej. ella/él/elle/indiferente"
                         />
-                        <TextField
-                            id="outlined"
-                            label="Talla Polera"
+                         <TextField
+                            id="outlined-select-currency"
+                            select
+                            label="Talla de polera"
+                            value={tshirtSize}
                             helperText="Para enviar regalos"
-                        />
+                            onChange={tshirtHandleChange}
+                        >
+                            {tshirtSizeAllOptions.map((option) => (
+                                <MenuItem key={option.value} value={option.value}>
+                                    {option.label}
+                                </MenuItem>
+                            ))}
+                        </TextField>
                         <TextField
                             id="outlined-number"
-                            label="N° de Zapato"
+                            label="N° de calzado"
                             type="number"
                             helperText="Para enviar regalos"
                             InputLabelProps={{
@@ -113,18 +161,13 @@ const UserAdd = () => {
                             }}
                         />
                         <TextField
-                            id="outlined"
-                            label="Hobbies"
-
-                        />
-                        <TextField
                             id="outlined-select-currency"
                             select
                             label="N° de Hijos"
                             value={childOptions}
-                            onChange={handleChange}
+                            onChange={childHandleChange}
                         >
-                            {allOptions.map((option) => (
+                            {childAllOptions.map((option) => (
                                 <MenuItem key={option.value} value={option.value}>
                                     {option.label}
                                 </MenuItem>
@@ -137,6 +180,7 @@ const UserAdd = () => {
                 display='flex'
                 justifyContent='center'
                 align-items='end' 
+                marginTop='30px'
                 >
                 <button className="userAdminbutton">
                     Agregar usuario
