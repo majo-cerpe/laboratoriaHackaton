@@ -10,6 +10,8 @@ import AdminAsideMenu from './components/adminView/AdminAsideMenu'
 import MiPerfil from './components/MiPerfilView/MiPerfil'
 import RhhView from './components/RRHHView/RhhView';
 import ContainerCards from './components/benefits/ContainerCards'
+import Moments from './components/adminView/menuOptionComponents/Moments'
+import Stefaniners from './components/Momentos/Stefaniners';
 import AdminDashboard from './components/adminView/menuOptionComponents/AdminDashboard'
 import UserAdmin from './components/adminView/menuOptionComponents/userAdmin/UserAdmin';
 import UserAdd from './components/adminView/menuOptionComponents/userAdmin/UserAdd'
@@ -17,6 +19,7 @@ import UsersTable from './components/adminView/menuOptionComponents/userAdmin/Us
 import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdmin';
 import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
 import StickyFooter from './components/adminView/StickyFooter';
+
 
 
 
@@ -114,8 +117,28 @@ function App() {
 					<StickyFooter />
 				</Route>
 
+
+				<Route exact path="/moments">
+					<div className="userAdmin">
+						<AdminAsideMenu />
+						<div className="userAdminMain" >
+							<Moments />
+						</div>
+					</div>
+
+				</Route>
+				<Route exact path="/perfil">
+					<MiPerfil />
+				</Route>
+
+				<Route exact path="/stefaniners">
+					<div>
+						<Stefaniners />
+					</div>
+				</Route>
+				
 			</Switch>
-		</Router>
+		</Router >
 	);
 }
 
