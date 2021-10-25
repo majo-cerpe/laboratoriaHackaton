@@ -2,7 +2,7 @@ import './App.css';
 import {
 	BrowserRouter as Router,
 	Switch,
-	Route
+	Route,
 } from "react-router-dom";
 import SignInSide from './components/SignInSide'
 import Dashboard from './components/DashBoard/Dashboard'
@@ -28,7 +28,7 @@ function App() {
 				<Route exact path="/">
 					<SignInSide />
 				</Route>
-				
+
 				<Route exact path="/home">
 					<Dashboard />
 				</Route>
@@ -53,7 +53,18 @@ function App() {
 					<StickyFooter />
 				</Route>
 
-				{/*vista admin - administración de usuarios*/}
+				{/*vista admin - Administración de usuarios*/}
+				<Route exact path="/userAdmin">
+					<div className="userAdmin">
+						<AdminAsideMenu />
+						<div className="userAdminMain" >
+							<UserAdmin />
+						</div>
+					</div>
+					<StickyFooter />
+				</Route>
+
+				{/*vista admin - Administración de Usuarios (Opción Editar o borrar usuarios)*/}
 				<Route exact path="/userAdmin/Add">
 					<div className="userAdmin">
 						<AdminAsideMenu />
@@ -65,7 +76,7 @@ function App() {
 					<StickyFooter />
 				</Route>
 
-				{/*vista admin - Agregar Usuario*/}
+				{/*vista admin - Administración de Usuarios (Opción Agregar Usuario)*/}
 				<Route exact path="/userAdmin/editOrDelete">
 					<div className="userAdmin">
 						<AdminAsideMenu />
@@ -77,16 +88,6 @@ function App() {
 					<StickyFooter />
 				</Route>
 
-				{/*vista admin - Editar o borrar usuarios*/}
-				<Route exact path="/userAdmin">
-					<div className="userAdmin">
-						<AdminAsideMenu />
-						<div className="userAdminMain" >
-							<UserAdmin />
-						</div>
-					</div>
-					<StickyFooter />
-				</Route>
 
 				{/*vista admin - beneficios*/}
 				<Route exact path="/benefitAdmin">
