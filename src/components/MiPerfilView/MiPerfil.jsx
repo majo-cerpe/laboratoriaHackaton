@@ -206,7 +206,8 @@ function addTodo(text){
                 <Stack direction="row" spacing={2}>
                   <AvatarProfile 
                   src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png"
-                   sx={{width: 70, heigh: 70, /* display: 'flex',flexDirection: 'column' */ }}
+                   /* sx={{width: 70, heigh: 70,  display: 'flex',flexDirection: 'column'  }} */
+                   style={{ height: '90px', width: '90px' }}
                    />
                    </Stack>
             
@@ -238,7 +239,7 @@ function addTodo(text){
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 400,
+                    height: 450,
                   }}
                   elevation ={12}
                 >
@@ -249,11 +250,13 @@ function addTodo(text){
           p={2}
           display= 'flex'
           justifyContent= 'center'
+          
             >
                 <Stack direction="row" spacing={2}>
                   <AvatarProfile 
                   src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png"
-                   sx={{width: 60, heigh: 60, /* display: 'flex',flexDirection: 'column' */ }}
+                   /* sx={{width: 60, heigh: 60,  display: 'flex',flexDirection: 'column'  }} */
+                   style={{ height: '90px', width: '90px' }}
                    />
                    </Stack>
             

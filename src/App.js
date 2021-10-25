@@ -10,7 +10,7 @@ import AdminAsideMenu from './components/adminView/AdminAsideMenu'
 import MiPerfil from './components/MiPerfilView/MiPerfil'
 import RhhView from './components/RRHHView/RhhView';
 import ContainerCards from './components/benefits/ContainerCards'
-import Moments from './components/adminView/menuOptionComponents/Moments'
+import Moments from './components/adminView/menuOptionComponents/MomentsAdmin'
 import Stefaniners from './components/Momentos/Stefaniners';
 import AdminDashboard from './components/adminView/menuOptionComponents/AdminDashboard'
 import UserAdmin from './components/adminView/menuOptionComponents/userAdmin/UserAdmin';
@@ -122,7 +122,7 @@ function App() {
 				</Route>
 
 
-				<Route exact path="/moments">
+				<Route exact path="/momentsAdmin">
 					<div className="userAdmin">
 						<AdminAsideMenu />
 						<div className="userAdminMain" >

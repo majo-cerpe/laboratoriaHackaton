@@ -15,7 +15,7 @@ const PartnerAdmin = () => {
     return (
         <Fragment> 
 	 
-    <h4>AGREGAR CONVENIOS</h4>
+    <h4>Administración de convenios</h4>
     <Container maxWidth="sm">
     <Grid container spacing={1} justify="center"> 
   

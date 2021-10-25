@@ -14,6 +14,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import firabase from "../firebase";
 import Image from "../assest/stefaninifondo.jpg"
+import logopequeñoazul from '../assest/logopequeñoazul.png';
+import SignInLogo from './SignInLogo';
 
 
 
@@ -104,15 +106,12 @@ export default function SignInSide() {
 							display: 'flex',
 							flexDirection: 'column',
 							alignItems: 'center',
-							
-
 						}}
 					>
-						<Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-							<LockOutlinedIcon />
-						</Avatar>
+						 <Avatar  src={logopequeñoazul} sx={{ m: 1,  /* bgcolor: 'secondary.main' */ }}  style={{ height: '90px', width: '90px' }}>
+						 </Avatar> 
 						<Typography component="h1" variant="h5">
-							Sign in
+							Inicia Sesión
 						</Typography>
 						<Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
 							<TextField
@@ -120,7 +119,7 @@ export default function SignInSide() {
 								required
 								fullWidth
 								id="email"
-								label="Email Address"
+								label="Email"
 								name="email"
 								autoComplete="email"
 								autoFocus
@@ -130,14 +129,14 @@ export default function SignInSide() {
 								required
 								fullWidth
 								name="password"
-								label="Password"
+								label="Contraseña"
 								type="password"
 								id="password"
 								autoComplete="current-password"
 							/>
 							<FormControlLabel
 								control={<Checkbox value="remember" color="primary" />}
-								label="Remember me"
+								label="Recordarme"
 							/>
 
 							<Button
@@ -146,7 +145,7 @@ export default function SignInSide() {
 								variant="contained"
 								sx={{ mt: 3, mb: 2 }}
 							>
-								Sign In
+								Iniciar Sesión
 							</Button>
 							<Copyright sx={{ mt: 5 }} />
 						</Box>

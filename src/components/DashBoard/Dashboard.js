@@ -27,6 +27,8 @@ import AddTodoList from './AddTodoList';
 import Growth from './Growth';
 import CarouselBenefits from './CarouselBenefits';
 
+
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -180,7 +182,7 @@ function addTodo(text){
                     display: 'flex',
                     flexDirection: 'column',
                     height: 240,
-                    borderRadius: 4,
+                    borderRadius: 2,
                   }}
                   elevation ={12}
                 >
@@ -208,7 +210,7 @@ function addTodo(text){
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12} md={8} lg={9}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 4}} elevation ={12}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 2}} elevation ={12}>
                   <Growth /> 
                 </Paper>
               </Grid>

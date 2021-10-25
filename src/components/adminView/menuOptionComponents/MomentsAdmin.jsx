@@ -4,7 +4,7 @@ import React from 'react'
 const Moments = () => {
     return (
         <div>
-            MOMENTOS STEFANINERS       
+            Administración de Momentos Stefeniners       
         </div>
     )
 }

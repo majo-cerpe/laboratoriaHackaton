@@ -43,11 +43,11 @@ export const mainListItems = (
 			<ListItemText primary="Administración de Convenios" />
 		</a>
 
-		<a component="a" href="/moments" className="button">
+		<a component="a" href="/momentsAdmin" className="button">
 			<ListItemIcon>
 				<VolunteerActivismIcon />
 			</ListItemIcon>
-			<ListItemText primary="Momentos Stefaniners" />
+			<ListItemText primary="Administración de Momentos Stefaniners" />
 		</a>
 
 
