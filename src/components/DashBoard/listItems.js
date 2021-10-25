@@ -12,40 +12,40 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 export const mainListItems = (
   <div>
 
-<a component="a" href="/home" className="button">
-<ListItemIcon>
-<DashboardIcon />
-</ListItemIcon>
-<ListItemText primary="Dashboard" />
-</a>
+    <a component="a" href="/home" className="button">
+      <ListItemIcon>
+        <DashboardIcon />
+      </ListItemIcon>
+      <ListItemText primary="Dashboard" />
+    </a>
 
-<a component="a" href="/home" className="button">
-<ListItemIcon>
-<DashboardIcon />
-</ListItemIcon>
-<ListItemText primary="lorem" />
-</a>
-   
-<a component="a" href="/Perfil" className="button">
-<ListItemIcon>
-<PeopleIcon />
-</ListItemIcon>
-<ListItemText primary="Perfil" />
-</a>
+    <a component="a" href="/home" className="button">
+      <ListItemIcon>
+        <DashboardIcon />
+      </ListItemIcon>
+      <ListItemText primary="lorem" />
+    </a>
 
-<a component="a" href="/home" className="button">
-<ListItemIcon>
-<BarChartIcon />
-</ListItemIcon>
-<ListItemText primary="lorem" />
-</a>
+    <a component="a" href="/Perfil" className="button">
+      <ListItemIcon>
+        <PeopleIcon />
+      </ListItemIcon>
+      <ListItemText primary="Perfil" />
+    </a>
 
-<a component="a" href="/home" className="button">
-<ListItemIcon>
-<LayersIcon />
-</ListItemIcon>
-<ListItemText primary="lorem" />
-</a>
+    <a component="a" href="/home" className="button">
+      <ListItemIcon>
+        <BarChartIcon />
+      </ListItemIcon>
+      <ListItemText primary="lorem" />
+    </a>
+
+    <a component="a" href="/home" className="button">
+      <ListItemIcon>
+        <LayersIcon />
+      </ListItemIcon>
+      <ListItemText primary="lorem" />
+    </a>
 
   </div>
 );
@@ -55,25 +55,25 @@ export const secondaryListItems = (
     <ListSubheader inset>Otra sección</ListSubheader>
 
     <a component="a" href="/beneficios" className="button">
-<ListItemIcon>
-  <AssignmentIcon />
-</ListItemIcon>
-<ListItemText primary="Beneficios" />
-</a>
+      <ListItemIcon>
+        <AssignmentIcon />
+      </ListItemIcon>
+      <ListItemText primary="Beneficios" />
+    </a>
 
-<a component="a" href="/convenios" className="button">
-<ListItemIcon>
-  <AssignmentIcon />
-</ListItemIcon>
-<ListItemText primary="Convenios" />
-</a>
+    <a component="a" href="/convenios" className="button">
+      <ListItemIcon>
+        <AssignmentIcon />
+      </ListItemIcon>
+      <ListItemText primary="Convenios" />
+    </a>
 
-<a component="a" href="/" className="button">
-<ListItemIcon>
-  <AssignmentIcon />
-</ListItemIcon>
-<ListItemText primary="lorem" />
-</a>
+    <a component="a" href="/" className="button">
+      <ListItemIcon>
+        <AssignmentIcon />
+      </ListItemIcon>
+      <ListItemText primary="lorem" />
+    </a>
   </div>
 );
 
