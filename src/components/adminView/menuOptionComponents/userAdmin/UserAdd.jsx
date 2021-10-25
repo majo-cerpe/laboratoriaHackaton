@@ -4,6 +4,10 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import './userAdmin.css'
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { collection, addDoc, doc, setDoc } from '@firebase/firestore';
+import { db } from '../../../../firebase';
+
 
 
 const childAllOptions = [
@@ -70,6 +74,7 @@ const tshirtSizeAllOptions = [
 
 
 const UserAdd = () => {
+
     const [childOptions, setChildOptions] = React.useState('No tengo hijos');
     const [tshirtSize, setTshirtSize] = React.useState('');
 
@@ -80,6 +85,68 @@ const UserAdd = () => {
     const tshirtHandleChange = (event) => {
         setTshirtSize(event.target.value);
     };
+
+    /////////////////////////////////////////////////////////////////////////////////
+    const [personalData, setPersonalData] = useState({
+        name: '',
+        lastname: '',
+        pronouns: '',
+        dateOfBirth: '',
+        email: '',
+        password: '',
+        tshirtSize: '',
+        shoeSize: '',
+        numberOfChildren: ''
+    })
+
+    const handleInputChange = (event) => {
+        setPersonalData({
+            ...personalData,
+            [event.target.name]: event.target.value
+        })
+    }
+
+    const createUser = () => {
+        const email = personalData.email;
+        const password = personalData.password
+        console.log('enviando datos...' + email + ' ' + password)
+
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, personalData.email, personalData.password)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+            });
+    }
+
+    const saveInFirestore = async () => {
+        const docRef = await addDoc(collection(db, 'users'), {
+            name: personalData.name,
+            lastname: personalData.lastname,
+            pronouns: personalData.pronouns,
+            dateOfBirth: personalData.dateOfBirth,
+            email: personalData.email,
+            password: personalData.password,
+            tshirtSize: personalData.tshirtSize,
+            shoeSize: personalData.shoeSize,
+            numberOfChildren: personalData.numberOfChildren
+        });
+        console.log(docRef.id);
+    };
+
+
+    const addAndSaveButton = () => {
+        createUser();
+        saveInFirestore()
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////
 
     return (
         <Paper
@@ -94,8 +161,6 @@ const UserAdd = () => {
         >
             <Box
                 component="form"
-                /*      bgcolor="secondary.main"
-                     color="secondary.contrastText" */
                 mt={4}
                 sx={{
                     margin: 0,
@@ -106,71 +171,86 @@ const UserAdd = () => {
             >
                 <Fragment>
                     <div className="addUserInputs">
+
                         <TextField
                             required
-                            id="outlined-required"
                             label="Nombre"
+                            name="name"
+                            onChange={handleInputChange}
                         />
+
                         <TextField
                             required
-                            id="outlined-required"
                             label="Apellido"
+                            name="lastname"
+                            onChange={handleInputChange}
                         />
+
                         <TextField
-                            id="outlined"
-                            label="Pronombres"
-                            helperText="ej. ella/el/otro"
-                        />
-                        <TextField
-                            id="outlined"
-                            type="date"
-                            helperText="Fecha de nacimiento"
-                        />
-                        <TextField
-                            required
-                            id="outlined"
-                            label="correo electrónico"
-                        />
-                        <TextField
-                            required
-                            id="outlined"
-                            type="password"
-                            label="Contraseña temporal"
-                        />
-                        <TextField
-                            id="outlined"
+
                             label="Pronombres"
                             helperText="ej. ella/él/elle/indiferente"
+                            name="pronouns"
+                            onChange={handleInputChange}
                         />
+
                         <TextField
-                            id="outlined-select-currency"
+                            type="date"
+                            helperText="Fecha de nacimiento"
+                            name="dateOfBirth"
+                            onChange={handleInputChange}
+                        />
+
+                        <TextField
+                            required
+                            label="correo electrónico"
+                            name="email"
+                            onChange={handleInputChange}
+                        />
+
+                        <TextField
+                            required
+                            type="password"
+                            label="Contraseña temporal"
+                            name="password"
+                            onChange={handleInputChange}
+                        />
+
+                        <TextField
                             select
                             label="Talla de polera"
                             value={tshirtSize}
                             helperText="Para enviar regalos"
+                            name="tshirtSize"
                             onChange={tshirtHandleChange}
+
                         >
                             {tshirtSizeAllOptions.map((option) => (
                                 <MenuItem key={option.value} value={option.value}>
                                     {option.label}
                                 </MenuItem>
                             ))}
+
                         </TextField>
+
                         <TextField
-                            id="outlined-number"
                             label="N° de calzado"
                             type="number"
                             helperText="Para enviar regalos"
                             InputLabelProps={{
                                 shrink: true,
                             }}
+                            name="shoeSize"
+                            onChange={handleInputChange}
                         />
+
                         <TextField
-                            id="outlined-select-currency"
                             select
                             label="N° de Hijos"
                             value={childOptions}
+                            name="numberOfChildren"
                             onChange={childHandleChange}
+
                         >
                             {childAllOptions.map((option) => (
                                 <MenuItem key={option.value} value={option.value}>
@@ -178,6 +258,7 @@ const UserAdd = () => {
                                 </MenuItem>
                             ))}
                         </TextField>
+
                     </div>
                 </Fragment>
             </Box>
@@ -189,7 +270,7 @@ const UserAdd = () => {
             >
                 <p className="required">*Campo obligatorio</p>
                 <hr />
-                <button type="submit" className="userAdminbutton addButton">
+                <button type="submit" className="userAdminbutton addButton" onClick={() => addAndSaveButton()}>
                     Agregar usuario
                 </button>
             </Box>

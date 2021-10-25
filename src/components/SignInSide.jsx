@@ -106,8 +106,6 @@ export default function SignInSide() {
 							display: 'flex',
 							flexDirection: 'column',
 							alignItems: 'center',
-							/* backgroundColor: '	#7B68EE' */
-
 						}}
 					>
 						 <Avatar  src={logopequeñoazul} sx={{ m: 1,  /* bgcolor: 'secondary.main' */ }}  style={{ height: '90px', width: '90px' }}>
