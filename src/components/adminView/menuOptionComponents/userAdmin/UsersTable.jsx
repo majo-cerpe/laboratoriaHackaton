@@ -86,8 +86,8 @@ const UsersTable = () => {
                     rowHeight={35}
                 />
                 <Stack direction="row" spacing={2} justifyContent="center" paddingTop='15px'>
-                    <button variant="contained" className="userAdminbutton">Borrar usuario</button>
-                    <button variant="contained" className="userAdminbutton">Editar usuario</button>
+                    <button variant="contained" className="userAdminbutton editButton">Editar usuario</button>
+                    <button variant="contained" className="userAdminbutton deleteButton">Borrar usuario</button>
                 </Stack>
             </Paper>
 

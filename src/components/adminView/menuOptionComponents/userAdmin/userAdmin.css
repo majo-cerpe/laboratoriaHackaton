@@ -42,3 +42,29 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.addButton{
+    background-color: seagreen;
+}
+.addButton:hover {
+    background-color: rgb(61, 186, 115);
+    color: white;
+}
+
+.deleteButton{
+    background-color: red;
+}
+
+.deleteButton:hover {
+    background-color: rgb(248, 107, 107);
+    color: white;
+}
+
+.editButton{
+    background-color: #1976d2;
+}
+
+.required{
+    color:red;
+    margin: 0
+}

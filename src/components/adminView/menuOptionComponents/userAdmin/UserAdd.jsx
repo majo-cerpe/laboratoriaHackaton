@@ -3,6 +3,7 @@ import Paper from '@mui/material/Paper'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
+import './userAdmin.css'
 
 const childAllOptions = [
     {
@@ -96,14 +97,14 @@ const UserAdd = () => {
                      color="secondary.contrastText" */
                 mt={4}
                 sx={{
-                    margin:0,
+                    margin: 0,
                     '& .MuiTextField-root': { m: 1, width: '25ch' },
                 }}
                 noValidate
                 autoComplete="off"
             >
                 <Fragment>
-                    <div className="addUserInputs">  
+                    <div className="addUserInputs">
                         <TextField
                             required
                             id="outlined-required"
@@ -125,11 +126,14 @@ const UserAdd = () => {
                             helperText="Fecha de nacimiento"
                         />
                         <TextField
+                            required
                             id="outlined"
                             label="correo electrónico"
                         />
                         <TextField
+                            required
                             id="outlined"
+                            type="password"
                             label="Contraseña temporal"
                         />
                         <TextField
@@ -137,7 +141,7 @@ const UserAdd = () => {
                             label="Pronombres"
                             helperText="ej. ella/él/elle/indiferente"
                         />
-                         <TextField
+                        <TextField
                             id="outlined-select-currency"
                             select
                             label="Talla de polera"
@@ -179,10 +183,12 @@ const UserAdd = () => {
             <Box
                 display='flex'
                 justifyContent='center'
-                align-items='end' 
+                align-items='end'
                 marginTop='30px'
-                >
-                <button className="userAdminbutton">
+            >
+                <p className="required">*Campo obligatorio</p>
+                <hr />
+                <button type="submit" className="userAdminbutton addButton">
                     Agregar usuario
                 </button>
             </Box>
