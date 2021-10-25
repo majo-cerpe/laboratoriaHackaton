@@ -7,7 +7,7 @@ import {
 import SignInSide from './components/SignInSide'
 import Dashboard from './components/DashBoard/Dashboard'
 import AdminAsideMenu from './components/adminView/AdminAsideMenu'
-
+import MiPerfil from './components/MiPerfilView/MiPerfil'
 import ContainerCards from './components/benefits/ContainerCards'
 
 import AdminDashboard from './components/adminView/menuOptionComponents/AdminDashboard'
@@ -16,7 +16,8 @@ import UserAdd from './components/adminView/menuOptionComponents/userAdmin/UserA
 import UsersTable from './components/adminView/menuOptionComponents/userAdmin/UsersTable'
 import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdmin';
 import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
-import MiPerfil from './components/MiPerfilView/MiPerfil'
+import StickyFooter from './components/adminView/StickyFooter';
+
 
 
 
@@ -49,6 +50,7 @@ function App() {
 							<AdminDashboard />
 						</div>
 					</div>
+					<StickyFooter />
 				</Route>
 
 				{/*vista admin - administración de usuarios*/}
@@ -60,6 +62,7 @@ function App() {
 							<UserAdd />
 						</div>
 					</div>
+					<StickyFooter />
 				</Route>
 
 				{/*vista admin - Agregar Usuario*/}
@@ -71,6 +74,7 @@ function App() {
 							<UsersTable />
 						</div>
 					</div>
+					<StickyFooter />
 				</Route>
 
 				{/*vista admin - Editar o borrar usuarios*/}
@@ -81,6 +85,7 @@ function App() {
 							<UserAdmin />
 						</div>
 					</div>
+					<StickyFooter />
 				</Route>
 
 				{/*vista admin - beneficios*/}
@@ -91,6 +96,7 @@ function App() {
 							<BenefitAdmin />
 						</div>
 					</div>
+					<StickyFooter />
 				</Route>
 
 				{/*vista admin - convenios*/}
@@ -101,6 +107,7 @@ function App() {
 							<PartnershipAdmin />
 						</div>
 					</div>
+					<StickyFooter />
 				</Route>
 
 			</Switch>
