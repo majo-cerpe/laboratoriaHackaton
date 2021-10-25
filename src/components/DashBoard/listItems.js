@@ -40,13 +40,6 @@ export const mainListItems = (
       <ListItemText primary="Recursos humanos" />
     </a>
 
-    <a component="a" href="/home" className="button">
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="lorem" />
-    </a>
-
   </div>
 );
 

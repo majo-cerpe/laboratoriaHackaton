@@ -104,7 +104,7 @@ export default function SignInSide() {
 							display: 'flex',
 							flexDirection: 'column',
 							alignItems: 'center',
-							backgroundColor: '	#7B68EE'
+							
 
 						}}
 					>
