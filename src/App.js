@@ -19,6 +19,7 @@ import UsersTable from './components/adminView/menuOptionComponents/userAdmin/Us
 import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdmin';
 import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
 import StickyFooter from './components/adminView/StickyFooter';
+import PhotoStefaniners from './components/Momentos/PhotoStefaniners'
 
 
 
@@ -118,7 +119,7 @@ function App() {
 				</Route>
 
 
-				<Route exact path="/moments">
+				<Route exact path="/momentsAdmi">
 					<div className="userAdmin">
 						<AdminAsideMenu />
 						<div className="userAdminMain" >
@@ -134,6 +135,9 @@ function App() {
 				<Route exact path="/stefaniners">
 					<div>
 						<Stefaniners />
+						<div>
+							<PhotoStefaniners />
+						</div>
 					</div>
 				</Route>
 				
