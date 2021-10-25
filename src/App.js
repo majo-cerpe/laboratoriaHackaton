@@ -16,7 +16,8 @@ import UserAdd from './components/adminView/menuOptionComponents/userAdmin/UserA
 import UsersTable from './components/adminView/menuOptionComponents/userAdmin/UsersTable'
 import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdmin';
 import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
-import MiPerfil from './components/MiPerfilView/MiPerfil'
+import MiPerfil from './components/MiPerfilView/MiPerfil'; 
+import RhhView from './components/RRHHView/RhhView';
 
 
 
@@ -40,6 +41,9 @@ function App() {
 					<ContainerCards />
 				</Route>
 
+				<Route exact path="/rrhh">
+					<RhhView />
+				</Route>
 
 				{/*vista admin - inicio(dashboard)*/}
 				<Route exact path="/adminViewDashboard">
