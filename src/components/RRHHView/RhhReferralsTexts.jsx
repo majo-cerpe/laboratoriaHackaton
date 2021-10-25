@@ -6,8 +6,8 @@ const RhhReferralsTexts = () => {
     return (
         <Fragment>
             <Box
-            bgcolor="secondary.main"
-            color="secondary.contrastText"
+/*             bgcolor="secondary.main"
+            color="secondary.contrastText" */
             alignItems="center"
             justifyContent= 'center' 
             >

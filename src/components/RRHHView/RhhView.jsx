@@ -188,8 +188,8 @@ function addTodo(text){
                 > */}
 {/*                 <Item> */}
           <Box 
-          bgcolor="primary.main"
-          color="primary.contrastText" 
+/*           bgcolor="primary.main"
+          color="primary.contrastText"  */
           p={1}
           display= 'flex'
           justifyContent= 'center'
@@ -204,8 +204,8 @@ function addTodo(text){
             >
                 {rhh.map(((item) => {
     	return<Box
-        bgcolor="secondary.main"
-        color="secondary.contrastText"
+/*         bgcolor="secondary.main"
+        color="secondary.contrastText" */
         display= 'flex'
         sx={{
            mx:11,
@@ -242,8 +242,8 @@ function addTodo(text){
 {/*                 </Paper> */}
              <RhhReferralsTexts/>
           <Box 
-          bgcolor="primary.main"
-          color="primary.contrastText" 
+/*           bgcolor="primary.main"
+          color="primary.contrastText"  */
           p={1}
           display= 'flex'
           justifyContent= 'center'

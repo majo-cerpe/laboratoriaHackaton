@@ -1,7 +1,7 @@
 [
     {
       "id": "1",
-      "image": "https://imgur.com/a/4eFG6PY",
+      "image": "./src/assest/rrhh.jpg",
       "title": "Portal Recursos Humanos",
       "secondaryText": "Obten liquidaciones de sueldo, certificado de antigüedad, copia contrato de trabajo y mucho más",
       "buttonText":" Ir a Portal",
