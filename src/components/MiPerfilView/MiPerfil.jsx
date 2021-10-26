@@ -105,7 +105,7 @@ function addTodo(text){
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open} style={{background: ' #301b70'}}>
+        <AppBar position="absolute" open={open} style={{background: 'linear-gradient(to right, #070926, #A22E89)'}}>
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
