@@ -33,10 +33,10 @@ export default function Benefits() {
 
   return (
     <React.Fragment>
-      <Typography variant="h5" style={{color: "#f5f5f5"}}>Beneficios Stefaniner</Typography>
+      <Typography variant="h5" style={{color: "#dcdcdc"}}>Beneficios Stefaniner</Typography>
       
-       <CarouselBenefits /> 
-      
+       
+      <CarouselBenefits />
   
       {/* <ResponsiveContainer>
         <LineChart

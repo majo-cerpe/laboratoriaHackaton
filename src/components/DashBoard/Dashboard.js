@@ -30,7 +30,8 @@ import logonovobranco from '../../assest/logonovobranco.png';
 import Avatar  from '@mui/material/Avatar'
 import WaveMoving from './WaveMoving';
 import stefaninicarusel from '../../assest/stefaninicarusel.png';
-
+import riego from '../../assest/riego.png'
+import fondoBenef from '../../assest/fondoBenef.jpg'
 
 
 function Copyright(props) {
@@ -192,7 +193,7 @@ function addTodo(text){
                     borderRadius: 2,
                   }}
                   elevation ={12}
-                  style={{background: 'linear-gradient(45deg, #6a52b3 46%, #4527a0,#301b70)'}} 
+                  style={{backgroundImage: `url(${fondoBenef})`}} 
                 >
                   <Benefits />
                 </Paper>
@@ -218,7 +219,7 @@ function addTodo(text){
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12} md={8} lg={9}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 2}} elevation ={12} style={{background: 'linear-gradient(45deg, #6a52b3 46%, #4527a0,#301b70'}}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 2}} elevation ={12} style={{backgroundImage: `url(${riego})`}}>
                   <Growth /> 
                 </Paper>
               </Grid>
