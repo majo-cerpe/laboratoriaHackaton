@@ -192,7 +192,7 @@ function addTodo(text){
                     borderRadius: 2,
                   }}
                   elevation ={12}
-                  style={{background: 'linear-gradient(to right bottom, #301b70, #4527a0,#6a52b3)'}} 
+                  style={{background: 'linear-gradient(45deg, #301b70, #4527a0,#6a52b3)'}} 
                 >
                   <Benefits />
                 </Paper>
@@ -218,7 +218,7 @@ function addTodo(text){
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12} md={8} lg={9}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 2}} elevation ={12} style={{background: 'linear-gradient(to right bottom, #301b70, #4527a0,#6a52b3)'}}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 2}} elevation ={12} style={{background: 'linear-gradient(45deg, #301b70, #4527a0,#6a52b3)'}}>
                   <Growth /> 
                 </Paper>
               </Grid>
