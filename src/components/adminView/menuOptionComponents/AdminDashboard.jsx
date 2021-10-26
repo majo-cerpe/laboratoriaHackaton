@@ -1,10 +1,11 @@
 import React from 'react'
+import './menuOptionsComponents.css'
 
 const AdminDashboard = () => {
     return (
         <div>
-            <h3>DashBoard</h3>
-            <p>acá van las estadísticas del sitio y otros datos relevantes para la administración del mismo</p>
+            <p className="optionHeader">DashBoard</p>
+            <p> acá van las estadísticas del sitio y otros datos relevantes para la administración del mismo </p>
         </div>
     )
 }

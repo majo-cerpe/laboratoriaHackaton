@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import Divider from '@mui/material/Divider';
 import './userAdmin.css'
 
+
 const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
     { field: 'firstName', headerName: 'Nombres', width: 140 },
@@ -27,20 +28,24 @@ const columns = [
     { field: 'numberOfChildren', headerName: 'Hijos', width: 140 }
 ];
 
+
+
 const rows = [
-    { id: 1, lastName: 'Juan', firstName: 'Perez', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
-    { id: 2, lastName: 'Juan', firstName: 'Perez', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
-    { id: 3, lastName: 'Juan', firstName: 'Perez', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
-    { id: 4, lastName: 'Juan', firstName: 'Perez', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
-    { id: 5, lastName: 'Juan', firstName: 'Perez', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
-    { id: 6, lastName: 'Juan', firstName: 'Perez', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
-    { id: 7, lastName: 'Juan', firstName: 'Perez', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
-    { id: 8, lastName: 'Juan', firstName: 'Perez', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
-    { id: 9, lastName: 'Juan', firstName: 'Perez', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
-    { id: 10, lastName: 'Juan', firstName: 'Perez', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
-    { id: 11, lastName: 'Juan', firstName: 'Perez', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
-    { id: 12, lastName: null, firstName: null, dateOfBirth: null, pronouns: null, tshirtSize: null, shoeSize: null, numberOfChildren: null },
+
+ { id: 1, lastName: 'Pérez', firstName: 'Juan', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
+    { id: 2, lastName: 'Pérez', firstName: 'Juan', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
+    { id: 3, lastName: 'Pérez', firstName: 'Juan', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
+    { id: 4, lastName: 'Pérez', firstName: 'Juan', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
+    { id: 5, lastName: 'Pérez', firstName: 'Juan', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
+    { id: 6, lastName: 'Pérez', firstName: 'Juan', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
+    { id: 7, lastName: 'Pérez', firstName: 'Juan', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
+    { id: 8, lastName: 'Pérez', firstName: 'Juan', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
+    { id: 9, lastName: 'Pérez', firstName: 'Juan', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
+    { id: 10, lastName: 'Pérez', firstName: 'Juan', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
+    { id: 11, lastName: 'Pérez', firstName: 'Juan', dateOfBirth: '3-12-1986', pronouns: 'Él', tshirtSize: 'L', shoeSize: '42', numberOfChildren: 'no tiene' },
+    { id: 12, lastName: null, firstName: null, dateOfBirth: null, pronouns: null, tshirtSize: null, shoeSize: null, numberOfChildren: null }, 
 ];
+
 
 const UsersTable = () => {
 
@@ -57,7 +62,7 @@ const UsersTable = () => {
                 }}
                 elevation={12}
             >
-                <Stack direction="row"  divider={<Divider orientation="vertical" flexItem />} spacing={{ xs: 4, sm: 8, md: 16 }} marginBottom={3}>
+                <Stack direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={{ xs: 4, sm: 8, md: 16 }} marginBottom={3}>
                     <Stack direction="row" spacing={2}>
                         <TextField
                             id="outlined-size-small"
@@ -77,6 +82,7 @@ const UsersTable = () => {
                         <button variant="contained" className="userAdminbutton">Buscar por apellido</button>
                     </Stack>
                 </Stack>
+
                 <DataGrid
                     rows={rows}
                     columns={columns}
@@ -85,6 +91,7 @@ const UsersTable = () => {
                     checkboxSelection
                     rowHeight={35}
                 />
+
                 <Stack direction="row" spacing={2} justifyContent="center" paddingTop='15px'>
                     <button variant="contained" className="userAdminbutton editButton">Editar usuario</button>
                     <button variant="contained" className="userAdminbutton deleteButton">Borrar usuario</button>

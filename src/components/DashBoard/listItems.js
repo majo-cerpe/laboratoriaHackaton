@@ -6,7 +6,10 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import  app  from '../../firebase';
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
+const auth = getAuth(app)
 
 export const mainListItems = (
   <div>
@@ -60,7 +63,7 @@ export const secondaryListItems = (
       <ListItemText primary="Convenios" />
     </a>
 
-    <a component="a" href="/" className="button">
+    <a  component="a"  href="/"  className="button" onClick={() => signOut(auth)}>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>

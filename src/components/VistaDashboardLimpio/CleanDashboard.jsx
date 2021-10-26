@@ -84,10 +84,43 @@ const Drawer = styled(MuiDrawer, {
 const mdTheme = createTheme();
 
 function AdminAsideMenuContent() {
-  const [open, setOpen] = React.useState(true);
-  const toggleDrawer = () => {
-    setOpen(!open);
-  };
+
+	const [open, setOpen] = React.useState(true);
+	const toggleDrawer = () => {
+		setOpen(!open);
+	};
+
+	return (
+		<ThemeProvider theme={mdTheme}>
+			<Box sx={{ display: 'flex' }}>
+				<CssBaseline />
+				<AppBar position="absolute" open={open} style={{background: 'linear-gradient(to right, #070926, #A22E89)'}}>
+					<Toolbar
+						sx={{
+							pr: '24px', // keep right padding when drawer closed
+						}}
+					>
+						<IconButton
+							edge="start"
+							color="inherit"
+							aria-label="open drawer"
+							onClick={toggleDrawer}
+							sx={{
+								marginRight: '36px',
+								...(open && { display: 'none' }),
+							}}
+						>
+							<MenuIcon />
+						</IconButton>
+						<Typography
+							component="h1"
+							variant="h6"
+							color="inherit"
+							noWrap
+							sx={{ flexGrow: 1 }}
+						>
+							Stefanini
+						</Typography>
 
   return (
     <ThemeProvider theme={mdTheme}>

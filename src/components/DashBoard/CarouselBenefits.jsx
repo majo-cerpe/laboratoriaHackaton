@@ -4,28 +4,17 @@ import { Paper, Button } from '@material-ui/core'
 import Grid from '@mui/material/Grid'
 import { Box } from '@mui/system';
 
+import matri from '../../assest/matri.jpg';
 
-/* import { styled } from '@mui/styles'; */
-/* 
-const MyBox = styled(Box)({
-      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-      border: 0,
-      boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-      color: 'white',
-      height: 48,
-      padding: '0 30px',
-    
-  }); */
-  
-  
 
 export default function CarouselBenefits() {
-   
+
     const allBenefits = [
         {
             name: 'Matrimonio',
             description: 'Bono por Matrimonio Unión civil $100.000 bruto',
             image:"https://as2.ftcdn.net/v2/jpg/01/15/58/51/1000_F_115585198_IEN2JGoZFVHdeZ7SBsa9YJBQcARJ4JDC.jpg",
+
         },
         {
             name: 'Cumpleaños',
@@ -48,6 +37,7 @@ export default function CarouselBenefits() {
     );
 }
 
+
 const ArrayBenefit = ({name, description, image, link}) => {
    /*  const classes =useStyles(); */
     return (
@@ -60,6 +50,7 @@ const ArrayBenefit = ({name, description, image, link}) => {
            
             <a href="/benefits"> <Button variant="contained" size ="small" style={{background: 'linear-gradient(to right bottom, #f5f5f5)'}} >ver más</Button></a>
            
+
             </Box>
                   
                 </Paper>

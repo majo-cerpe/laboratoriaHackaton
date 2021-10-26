@@ -2,8 +2,10 @@ import React from 'react'
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import './userAdmin.css'
+import '../menuOptionsComponents.css'
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../../../../firebase';
+import { Link } from "react-router-dom";
 
 const UserAdmin = () => {
 
@@ -17,7 +19,7 @@ const UserAdmin = () => {
 
     return (
         <div>
-            Administración de Usuarios
+            <p className="optionHeader">Administración de Usuarios</p>
             <Paper
                 sx={{
                     p: 2,
@@ -30,8 +32,12 @@ const UserAdmin = () => {
                 elevation={12}
             >
                 <Stack direction="row" spacing={2} justifyContent="center">
-                    <button variant="contained" className="userAdminbutton" href="/userAdmin/Add">Agregar usuarios</button>
-                    <button variant="contained" className="userAdminbutton" href="/userAdmin/editOrDelete" onClick={() => getPersonalData()}>Editar o eliminar usuarios</button>
+                    <Link to="/userAdmin/Add">
+                        <button variant="contained" className="userAdminbutton" >Agregar usuarios</button>
+                    </Link>
+                    <Link to="/userAdmin/editOrDelete">
+                        <button  variant="contained" className="userAdminbutton" onClick={() => getPersonalData()}>Editar o eliminar usuarios</button>
+                    </Link>
                 </Stack>
             </Paper>
         </div>

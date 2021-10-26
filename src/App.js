@@ -129,6 +129,7 @@ function App() {
 							<Moments />
 						</div>
 					</div>
+					<StickyFooter />
 				</Route>
 				
 				<Route exact path="/perfil">
