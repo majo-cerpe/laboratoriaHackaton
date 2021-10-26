@@ -15,7 +15,8 @@ const MyBox = styled(Box)({
       padding: '0 30px',
     
   }); */
-
+  
+  
 
 export default function CarouselBenefits() {
    
@@ -23,17 +24,20 @@ export default function CarouselBenefits() {
         {
             name: 'Matrimonio',
             description: 'Bono por Matrimonio Unión civil $100.000 bruto',
-            image:"https://imgur.com/a/3xoUNee",
+            image:"",
+            link:"",
         },
         {
             name: 'Cumpleaños',
             description: 'Si tu cumpleaños cae fin de semana o feriado, puedes tomar la tarde dentro del mes',
             image:"",
+            link:"",
         },
         {
             name: 'Nacimiento',
             description: 'Bono por Nacimiento de un hijo $100.000 bruto',
             image:"",
+            link:"",
         },
     ];
 
@@ -46,7 +50,7 @@ export default function CarouselBenefits() {
     );
 }
 
-const ArrayBenefit = ({name, description, image}) => {
+const ArrayBenefit = ({name, description, image, link}) => {
    /*  const classes =useStyles(); */
     return (
         <React.Fragment>
@@ -54,7 +58,7 @@ const ArrayBenefit = ({name, description, image}) => {
             <h3>{name}</h3>
             <p>{description}</p>
             <Box  sx={{display: "flex", alignSelf:"flex-end"}}>
-            <Button variant="contained" color="primary" size ="small" >ver más</Button>
+            <a href={link}><Button variant="contained" color="primary" size ="small">Ver más</Button></a>
             </Box>
         </React.Fragment>
     );

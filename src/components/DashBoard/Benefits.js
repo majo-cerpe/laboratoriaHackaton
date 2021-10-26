@@ -9,6 +9,7 @@ import CarouselBenefits from './CarouselBenefits';
 
 
 
+
 /* // Generate Sales Data
 function createData(time, amount) {
   return { time, amount };
@@ -34,8 +35,8 @@ export default function Benefits() {
     <React.Fragment>
       <Title>Beneficios Stefaniner</Title>
       
-       <CarouselBenefits /> 
-      
+       
+      <CarouselBenefits />
   
       {/* <ResponsiveContainer>
         <LineChart
