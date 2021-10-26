@@ -5,6 +5,7 @@ import './userAdmin.css'
 import '../menuOptionsComponents.css'
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../../../../firebase';
+import { Link } from "react-router-dom";
 
 const UserAdmin = () => {
 
@@ -31,12 +32,12 @@ const UserAdmin = () => {
                 elevation={12}
             >
                 <Stack direction="row" spacing={2} justifyContent="center">
-                    <a href="/userAdmin/Add">
+                    <Link to="/userAdmin/Add">
                         <button variant="contained" className="userAdminbutton" >Agregar usuarios</button>
-                    </a>
-                    <a href="/userAdmin/editOrDelete">
+                    </Link>
+                    <Link to="/userAdmin/editOrDelete">
                         <button  variant="contained" className="userAdminbutton" onClick={() => getPersonalData()}>Editar o eliminar usuarios</button>
-                    </a>
+                    </Link>
                 </Stack>
             </Paper>
         </div>
