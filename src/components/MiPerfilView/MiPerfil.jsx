@@ -26,6 +26,9 @@ import EditPerfilText from './EditPerfilText';
 import UserInfoFinished from './UserInfoFinished';
 import logonovobranco from '../../assest/logonovobranco.png';
 import Avatar  from '@mui/material/Avatar'
+import gradienteperfil from '../../assest/gradienteperfil.png';
+import perfilmiperfil from '../../assest/perfilmiperfil.png';
+import profileback from '../../assest/profileback.png';
 
 
 
@@ -186,8 +189,9 @@ function addTodo(text){
                     display: 'flex',
                     flexDirection: 'column',
                     height: 870,
-                    borderRadius: 8
+                    borderRadius: 4
                   }}
+                  
                   elevation ={12}
                 >
         {/* caja y componente edita tu perfil */}
@@ -206,6 +210,7 @@ function addTodo(text){
           p={2}
           display= 'flex'
           justifyContent= 'center'
+          
             >
                 <Stack direction="row" spacing={2}>
                   <AvatarProfile 
@@ -227,6 +232,7 @@ function addTodo(text){
       sx={{
         '& .MuiTextField-root': { m: 1, width: '25ch' },
       }}
+      
       noValidate
       autoComplete="off"
     >
@@ -244,7 +250,9 @@ function addTodo(text){
                     display: 'flex',
                     flexDirection: 'column',
                     height: 450,
+                    borderRadius: 4
                   }}
+                  style={{ backgroundImage: `url(${perfilmiperfil})` }}
                   elevation ={12}
                 >
                     {/*Empieza  caja y componente Avatar */}
@@ -269,7 +277,7 @@ function addTodo(text){
                    {/*Empieza  caja y componente UserInfoFinished*/}
                    <Box 
           textcolor="primary.main"
-          style={{background: ' #301b70'}}
+          /* style={{backdropFilter: "blur(30px) }} */
           p={1}
           display= 'flex'
           justifyContent= 'center'

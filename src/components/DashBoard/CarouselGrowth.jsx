@@ -7,21 +7,21 @@ export default function CarouselGrowth() {
 const allGrowth = [
     {
         name: 'Academia',
-        description: '',
+        description: 'Encuentra cursos y capacitaciones. ',
         link:"https://stefanini.konviva.com.br/lms/#/home",
         image:"",
     },
 
     {
         name: 'Acsendo',
-        description: '',
+        description: 'Evaluación de metas de colaboradores que se destaquen por vivir nuestras aptitudes de Stefanini.',
         link:"https://hr.acsendo.com/results/admin ",
         image:"",
     },
     
     {
         name: 'Mentoring',
-        description: '',
+        description: 'Más de 100 mentores, en 3 idiomas y 14 tópicos diferentes.',
         link:"https://mentoring.stefanini.io/#/login",
         image:"",
     },
