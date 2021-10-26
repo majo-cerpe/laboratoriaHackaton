@@ -9,10 +9,12 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import { mainListItems, secondaryListItems } from './AdminMenuItems';
+import logonovobranco from '../../assest/logonovobranco.png';
+
+
 
 
 const drawerWidth = 240;
@@ -74,8 +76,9 @@ const AdminAsideMenu = () => {
 		<ThemeProvider theme={mdTheme}>
 			<Box sx={{ display: 'flex' }}>
 				<CssBaseline />
-				<AppBar position="absolute" open={open}>
+				<AppBar position="absolute" open={open} style={{ background: 'linear-gradient(to right, #070926, #167373)' }}>
 					<Toolbar
+						open={open}
 						sx={{
 							pr: '24px', // keep right padding when drawer closed
 						}}
@@ -87,11 +90,12 @@ const AdminAsideMenu = () => {
 							onClick={toggleDrawer}
 							sx={{
 								marginRight: '36px',
-								...(open && { display: 'none' }),
+								...(open && { visibility:"hidden"}),
 							}}
 						>
 							<MenuIcon />
 						</IconButton>
+						<img src={logonovobranco} style={{ maxWidth: 150 }} ></img>
 						<Typography
 							component="h1"
 							variant="h6"
@@ -99,9 +103,8 @@ const AdminAsideMenu = () => {
 							noWrap
 							sx={{ flexGrow: 1 }}
 						>
-							Stefanini
+							{/*here i can put text in the appBar*/}
 						</Typography>
-
 					</Toolbar>
 				</AppBar>
 				<Drawer variant="permanent" open={open}>
@@ -122,10 +125,23 @@ const AdminAsideMenu = () => {
 					<Divider />
 					<List>{secondaryListItems}</List>
 				</Drawer>
+				<Box
+					component="main"
+					sx={{
+						backgroundColor: (theme) =>
+							theme.palette.mode === 'light'
+								? theme.palette.grey[100]
+								: theme.palette.grey[900],
+						flexGrow: 1,
+						height: '100vh',
+						overflow: 'auto',
+					}}
+				>
+				</Box>
 			</Box>
 		</ThemeProvider>
 
-		
+
 	);
 }
 
