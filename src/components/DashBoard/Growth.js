@@ -57,7 +57,7 @@ function preventDefault(event) {
 export default function Orders() {
   return (
     <React.Fragment>
-      <Typography variant="h5" style={{color: "#f5f5f5"}}>Crecimiento</Typography>
+      <Typography variant="h5" style={{color: "#dcdcdc"}}>Crecimiento</Typography>
      <CarouselGrowth />
     </React.Fragment>
   );

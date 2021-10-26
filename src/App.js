@@ -9,7 +9,7 @@ import Dashboard from './components/DashBoard/Dashboard'
 import AdminAsideMenu from './components/adminView/AdminAsideMenu'
 import MiPerfil from './components/MiPerfilView/MiPerfil'
 import RhhView from './components/RRHHView/RhhView';
-import ContainerCards from './components/benefits/ContainerCards'
+import DashboardBenefits from './components/benefits/DashboardBenefits'
 import Moments from './components/adminView/menuOptionComponents/MomentsAdmin'
 import Stefaniners from './components/Momentos/Stefaniners';
 import AdminDashboard from './components/adminView/menuOptionComponents/AdminDashboard'
@@ -43,7 +43,7 @@ function App() {
 				</Route>
 
 				<Route exact path="/benefits">
-				<ContainerCards /> 
+				<DashboardBenefits />
 				</Route>
 				
 				<Route exact path="/rrhh">
