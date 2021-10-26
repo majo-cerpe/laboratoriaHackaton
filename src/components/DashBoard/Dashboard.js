@@ -26,8 +26,10 @@ import ToDo from './ToDo';
 import AddTodoList from './AddTodoList';
 import Growth from './Growth';
 import CarouselBenefits from './CarouselBenefits';
-import logoblanco from '../../assest/logoblanco.png';
+import logonovobranco from '../../assest/logonovobranco.png';
 import Avatar  from '@mui/material/Avatar'
+import WaveMoving from './WaveMoving';
+import stefaninicarusel from '../../assest/stefaninicarusel.png';
 
 
 
@@ -126,16 +128,15 @@ function addTodo(text){
             >
             <MenuIcon />
             </IconButton>
+            <img src={logonovobranco} style={{maxWidth:150}} >
+              </img> 
             <Typography
               component="h1"
               variant="h6"
               color="inherit"
               noWrap
               sx={{ flexGrow: 1 }}
-            >
-            <Avatar src={logoblanco}>
-              </Avatar>     
-               Stefanini
+            >  
             </Typography>
 
 {/*             <IconButton color="inherit">
@@ -191,10 +192,9 @@ function addTodo(text){
                     borderRadius: 2,
                   }}
                   elevation ={12}
-                  style={{background: 'linear-gradient(to right bottom, #301b70, #4527a0,#6a52b3)'}}
+                  style={{background: 'linear-gradient(to right bottom, #301b70, #4527a0,#6a52b3)'}} 
                 >
                   <Benefits />
-
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
@@ -227,6 +227,7 @@ function addTodo(text){
           </Container>
         </Box>
       </Box>
+      
     </ThemeProvider>
   );
 }

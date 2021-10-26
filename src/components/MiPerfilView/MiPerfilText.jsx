@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 const MiPerfilText = () => {
     return (
         <div>
-        <Box>
+        <Box sx={{m:2}}>
             <h1>Mi Perfil</h1>
         </Box>
     </div>

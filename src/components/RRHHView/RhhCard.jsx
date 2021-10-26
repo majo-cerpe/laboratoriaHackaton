@@ -16,7 +16,7 @@ const RhhCard = ({title, description, image, buttonText, secondaryText,link }) =
 		  <CardActionArea>
 			<CardMedia
 			  component="img"
-			  height="140"
+			  height="230"
 			  image={image}
 			  alt=""
 

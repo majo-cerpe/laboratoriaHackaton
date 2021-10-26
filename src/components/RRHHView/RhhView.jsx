@@ -23,7 +23,7 @@ import RhhCard from './RhhCard.jsx';
 import rhh from './rhh.json';
 import RhhReferralsTexts from './RhhReferralsTexts';
 import ReferralsFiles from'./ReferralsFiles';
-import logoblanco from '../../assest/logoblanco.png';
+import logonovobranco from '../../assest/logonovobranco.png';
 import Avatar  from '@mui/material/Avatar'
 
 
@@ -123,6 +123,8 @@ function addTodo(text){
             >
             <MenuIcon />
             </IconButton>
+            <img src={logonovobranco} style={{maxWidth:150}} >
+              </img> 
             <Typography
               component="h1"
               variant="h6"
@@ -130,9 +132,7 @@ function addTodo(text){
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              <Avatar src={logoblanco}>
-              </Avatar>     
-              Stefanini
+
             </Typography>
 {/*             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">

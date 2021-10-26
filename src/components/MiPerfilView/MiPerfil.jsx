@@ -24,7 +24,7 @@ import InfoUser from './InfoUser';
 import MiPerfilText from './MiPerfilText';
 import EditPerfilText from './EditPerfilText';
 import UserInfoFinished from './UserInfoFinished';
-import logoblanco from '../../assest/logoblanco.png';
+import logonovobranco from '../../assest/logonovobranco.png';
 import Avatar  from '@mui/material/Avatar'
 
 
@@ -123,6 +123,8 @@ function addTodo(text){
             >
             <MenuIcon />
             </IconButton>
+            <img src={logonovobranco} style={{maxWidth:150}} >
+              </img> 
             <Typography
               component="h1"
               variant="h6"
@@ -130,8 +132,7 @@ function addTodo(text){
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              <Avatar src={logoblanco}></Avatar>
-              Stefanini
+
             </Typography>
 {/*             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
@@ -184,7 +185,7 @@ function addTodo(text){
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 680,
+                    height: 870,
                     borderRadius: 8
                   }}
                   elevation ={12}
