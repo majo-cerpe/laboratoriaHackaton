@@ -12,9 +12,9 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import firabase from "../firebase";
-import Image from "../assest/stefaninifondo.jpg"
+import Image from "../assest/fondoprincipal.png"
 import logopequeñoazul from '../assest/logopequeñoazul.png';
-
+import Logostefaniniprincipal from "./Logostefaniniprincipal";
 
 
 function Copyright(props) {
@@ -81,7 +81,7 @@ export default function SignInSide() {
 	return (
 		<ThemeProvider theme={theme}>
 			<Grid container component="main" sx={{ height: '100vh' }}>
-
+		
 				<CssBaseline />
 				<Grid
 					item
