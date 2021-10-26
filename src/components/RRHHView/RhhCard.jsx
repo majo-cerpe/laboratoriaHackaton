@@ -16,7 +16,7 @@ const RhhCard = ({title, description, image, buttonText, secondaryText,link }) =
 		  <CardActionArea>
 			<CardMedia
 			  component="img"
-			  height="140"
+			  height="230"
 			  image={image}
 			  alt=""
 
@@ -30,7 +30,7 @@ const RhhCard = ({title, description, image, buttonText, secondaryText,link }) =
 			  </Typography>
 			  <Typography variant="body2" color="text.secondary">
               <a href={link}>
-             <Button variant="contained" color="primary">
+             <Button variant="contained" style={{background: 'linear-gradient(to right bottom, #301b70, #4527a0,#6a52b3)'}}>
              {buttonText}
              </Button>
              </a>

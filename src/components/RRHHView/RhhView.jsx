@@ -22,8 +22,11 @@ import RhhText from './RhhText';
 import RhhCard from './RhhCard.jsx';
 import rhh from './rhh.json';
 import RhhReferralsTexts from './RhhReferralsTexts';
-import ReferralsFiles from './ReferralsFiles';
+import ReferralsFiles from'./ReferralsFiles';
+import logonovobranco from '../../assest/logonovobranco.png';
+import Avatar  from '@mui/material/Avatar'
 import './rrhh.css'
+
 
 
 
@@ -97,41 +100,45 @@ function DashboardContent() {
 
 	const [texts, setTexts] = useState()
 
-	function addTodo(text) {
-		setTexts([text, ...texts]);
-	}
-	return (
-		<ThemeProvider theme={mdTheme}>
-			<Box sx={{ display: 'flex' }}>
-				<CssBaseline />
-				<AppBar position="absolute" open={open}>
-					<Toolbar
-						sx={{
-							pr: '24px', // keep right padding when drawer closed
-						}}
-					>
-						<IconButton
-							edge="start"
-							color="inherit"
-							aria-label="open drawer"
-							onClick={toggleDrawer}
-							sx={{
-								marginRight: '36px',
-								...(open && { display: 'none' }),
-							}}
-						>
-							<MenuIcon />
-						</IconButton>
-						<Typography
-							component="h1"
-							variant="h6"
-							color="inherit"
-							noWrap
-							sx={{ flexGrow: 1 }}
-						>
-							Stefanini
-						</Typography>
-						{/*             <IconButton color="inherit">
+
+function addTodo(text){
+  setTexts([text,...texts]);
+}
+  return (
+    <ThemeProvider theme={mdTheme}>
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <AppBar position="absolute" open={open} style={{background: ' #301b70'}}>
+          <Toolbar
+            sx={{
+              pr: '24px', // keep right padding when drawer closed
+            }}
+          >
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              onClick={toggleDrawer}
+              sx={{
+                marginRight: '36px',
+                ...(open && { display: 'none' }),
+              }}
+            >
+            <MenuIcon />
+            </IconButton>
+            <img src={logonovobranco} style={{maxWidth:150}} >
+              </img> 
+            <Typography
+              component="h1"
+              variant="h6"
+              color="inherit"
+              noWrap
+              sx={{ flexGrow: 1 }}
+            >
+
+            </Typography>
+{/*             <IconButton color="inherit">
+
               <Badge badgeContent={4} color="secondary">
                 <NotificationsActiveIcon />
               </Badge>

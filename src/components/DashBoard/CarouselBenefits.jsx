@@ -23,7 +23,7 @@ export default function CarouselBenefits() {
         {
             name: 'Matrimonio',
             description: 'Bono por Matrimonio Unión civil $100.000 bruto',
-            image:"https://imgur.com/a/3xoUNee",
+            image:"https://st.depositphotos.com/3281181/4475/i/600/depositphotos_44759419-stock-photo-wedding-couple-holding-hands.jpg",
         },
         {
             name: 'Cumpleaños',
@@ -50,11 +50,11 @@ const ArrayBenefit = ({name, description, image}) => {
    /*  const classes =useStyles(); */
     return (
         <React.Fragment>
-           {/*  <img>{image}</img> */}
-            <h3>{name}</h3>
-            <p>{description}</p>
+            {/* <img> {image} </img>  */}
+            <h4 style={{color: "#f5f5f5"}}>{name}</h4>
+            <p style={{color: "#f5f5f5"}}>{description}</p>
             <Box  sx={{display: "flex", alignSelf:"flex-end"}}>
-            <Button variant="contained" color="primary" size ="small" >ver más</Button>
+            <Button variant="contained" size ="small" style={{background: 'linear-gradient(to right bottom, #f5f5f5)'}} >ver más</Button>
             </Box>
         </React.Fragment>
     );

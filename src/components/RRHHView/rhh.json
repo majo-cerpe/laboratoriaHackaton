@@ -1,7 +1,7 @@
 [
     {
       "id": "1",
-      "image": "./src/assest/rrhh.jpg",
+      "image": "https://www.esan.edu.pe/apuntes-empresariales/2020/06/02/1500x844_imagen3.jpg",
       "title": "Portal Recursos Humanos",
       "secondaryText": "Obten liquidaciones de sueldo, certificado de antigüedad, copia contrato de trabajo y mucho más",
       "buttonText":" Ir a Portal",
@@ -10,7 +10,7 @@
 
     {
         "id": "2",
-        "image": "https://imgur.com/a/4eFG6PY",
+        "image": "https://fotos-bb2b.s3.eu-west-3.amazonaws.com/wp-content/uploads/2021/07/31195923/objetivos-de-la-organizacion-626x450.jpg",
         "title": "Skill Mapping",
         "secondaryText": "Mapea tus habilidades",
         "buttonText":"Ir",
