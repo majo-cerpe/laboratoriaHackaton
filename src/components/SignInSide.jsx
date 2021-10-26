@@ -15,7 +15,8 @@ import firabase from "../firebase";
 import Image from "../assest/fondoprincipal.png"
 import logopequeñoazul from '../assest/logopequeñoazul.png';
 import Logostefaniniprincipal from "./Logostefaniniprincipal";
-
+import SignInMovement from "./SignInMovement";
+import Container from '@mui/material/Container'
 
 function Copyright(props) {
 	return (
@@ -81,11 +82,12 @@ export default function SignInSide() {
 	return (
 		<ThemeProvider theme={theme}>
 			<Grid container component="main" sx={{ height: '100vh' }}>
-		
+			
 				<CssBaseline />
-				<Grid
+
+				<Grid component="box"
 					item
-					xs={false}
+					xs={12}
 					sm={4}
 					md={7}
 					sx={{
@@ -95,8 +97,13 @@ export default function SignInSide() {
 						backgroundSize: 'cover',
 
 					}}
-				/>
-				<Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+					
+				>
+					<Logostefaniniprincipal/>
+					<SignInMovement  /* style={{width:5,mt: 274}}  *//>
+				</Grid>
+				<Grid item xs={12} sm={8} md={5}  component={Paper}  elevation={6} square>
+					
 					<Box
 						sx={{
 							my: 8,
@@ -145,6 +152,7 @@ export default function SignInSide() {
 							>
 								Iniciar Sesión
 							</Button>
+							
 							<Copyright sx={{ mt: 5 }} />
 						</Box>
 					</Box>
