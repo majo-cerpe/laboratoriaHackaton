@@ -56,12 +56,12 @@ export const mainListItems = (
 
 export const secondaryListItems = (
 	<div>
-		<ListSubheader inset>Otra sección</ListSubheader>
+{/* 		<ListSubheader inset>Otra sección</ListSubheader>
 		<a component="a" href="/adminViewDashboard" className="button">
 			<ListItemIcon>
 				<AssignmentIcon />
 			</ListItemIcon>
 			<ListItemText primary="Lorem" />
-		</a>
+		</a> */}
 	</div>
 );

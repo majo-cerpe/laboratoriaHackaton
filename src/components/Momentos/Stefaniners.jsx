@@ -18,7 +18,8 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import { mainListItems, secondaryListItems } from '../DashBoard/listItems';
-import PhotoStefaniners from './PhotoStefaniners'
+import PhotoStefaniners from  './PhotoStefaniners'
+import logonovobranco from '../../assest/logonovobranco.png';
 
 
 
@@ -83,6 +84,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const mdTheme = createTheme();
 
+
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
@@ -98,7 +100,7 @@ function addTodo(text){
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open}>
+        <AppBar position="absolute" open={open} style={{background: 'linear-gradient(to right, #070926, #A22E89)'}} >
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed

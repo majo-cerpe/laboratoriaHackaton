@@ -8,16 +8,15 @@ import Checkbox from "@mui/material/Checkbox";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import firabase from "../firebase";
-import Image from "../assest/stefaninifondo.jpg"
+import Image from "../assest/fondoprincipal.png"
 import logopequeñoazul from '../assest/logopequeñoazul.png';
-import SignInLogo from './SignInLogo';
-
-
+import Logostefaniniprincipal from "./Logostefaniniprincipal";
+import SignInMovement from "./SignInMovement";
+import Container from '@mui/material/Container'
 
 function Copyright(props) {
 	return (
@@ -83,11 +82,12 @@ export default function SignInSide() {
 	return (
 		<ThemeProvider theme={theme}>
 			<Grid container component="main" sx={{ height: '100vh' }}>
-
+			
 				<CssBaseline />
-				<Grid
+
+				<Grid component="box"
 					item
-					xs={false}
+					xs={12}
 					sm={4}
 					md={7}
 					sx={{
@@ -97,8 +97,13 @@ export default function SignInSide() {
 						backgroundSize: 'cover',
 
 					}}
-				/>
-				<Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+					
+				>
+					<Logostefaniniprincipal/>
+					<SignInMovement  /* style={{width:5,mt: 274}}  *//>
+				</Grid>
+				<Grid item xs={12} sm={8} md={5}  component={Paper}  elevation={6} square>
+					
 					<Box
 						sx={{
 							my: 8,
@@ -108,8 +113,8 @@ export default function SignInSide() {
 							alignItems: 'center',
 						}}
 					>
-						 <Avatar  src={logopequeñoazul} sx={{ m: 1,  /* bgcolor: 'secondary.main' */ }}  style={{ height: '90px', width: '90px' }}>
-						 </Avatar> 
+						<Avatar src={logopequeñoazul} sx={{ m: 1 }} style={{ height: '90px', width: '90px' }}>
+						</Avatar>
 						<Typography component="h1" variant="h5">
 							Inicia Sesión
 						</Typography>
@@ -147,6 +152,7 @@ export default function SignInSide() {
 							>
 								Iniciar Sesión
 							</Button>
+							
 							<Copyright sx={{ mt: 5 }} />
 						</Box>
 					</Box>

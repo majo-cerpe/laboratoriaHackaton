@@ -103,7 +103,7 @@ const InfoUser = () => {
       display= 'flex'
       justifyContent= 'flex-end'>
 
-      <Button variant="contained" color="primary">
+      <Button variant="contained" style={{background: 'linear-gradient(to right bottom, #301b70, #4527a0,#6a52b3)'}}>
           Guardar
       </Button>
       </Box>

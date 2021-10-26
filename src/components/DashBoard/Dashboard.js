@@ -26,7 +26,12 @@ import ToDo from './ToDo';
 import AddTodoList from './AddTodoList';
 import Growth from './Growth';
 import CarouselBenefits from './CarouselBenefits';
-
+import logonovobranco from '../../assest/logonovobranco.png';
+import Avatar  from '@mui/material/Avatar'
+import WaveMoving from './WaveMoving';
+import stefaninicarusel from '../../assest/stefaninicarusel.png';
+import riego from '../../assest/riego.png'
+import fondoBenef from '../../assest/fondoBenef.jpg'
 
 
 function Copyright(props) {
@@ -105,11 +110,12 @@ function addTodo(text){
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open}>
+        <AppBar position="absolute" open={open} style={{background: 'linear-gradient(to right, #070926, #A22E89)'}} >
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
             }}
+
           >
             <IconButton
               edge="start"
@@ -123,15 +129,17 @@ function addTodo(text){
             >
             <MenuIcon />
             </IconButton>
+            <img src={logonovobranco} style={{maxWidth:150}} >
+              </img> 
             <Typography
               component="h1"
               variant="h6"
               color="inherit"
               noWrap
               sx={{ flexGrow: 1 }}
-            >
-              Stefanini
+            >  
             </Typography>
+
 {/*             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <NotificationsActiveIcon />
@@ -185,9 +193,9 @@ function addTodo(text){
                     borderRadius: 2,
                   }}
                   elevation ={12}
+                  style={{backgroundImage: `url(${fondoBenef})`}} 
                 >
                   <Benefits />
-
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
@@ -200,6 +208,7 @@ function addTodo(text){
                     height: 300,
                   }}
                   elevation ={12}
+                  
                 >
                   <TodoList /* addTodo= {addTodo}  *//>
                  {/*  <AddTodoList texts={texts}/> */}
@@ -210,7 +219,7 @@ function addTodo(text){
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12} md={8} lg={9}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 2}} elevation ={12}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 2}} elevation ={12} style={{backgroundImage: `url(${riego})`}}>
                   <Growth /> 
                 </Paper>
               </Grid>
@@ -219,6 +228,7 @@ function addTodo(text){
           </Container>
         </Box>
       </Box>
+      
     </ThemeProvider>
   );
 }

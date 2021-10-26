@@ -11,11 +11,11 @@ import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
 import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import { mainListItems, secondaryListItems } from "./";
+import { mainListItems, secondaryListItems } from "../DashBoard/listItems";
+import ContainerCards from "./ContainerCards";
 
 function Copyright(props) {
   return (
@@ -83,44 +83,11 @@ const Drawer = styled(MuiDrawer, {
 
 const mdTheme = createTheme();
 
-function AdminAsideMenuContent() {
-
-	const [open, setOpen] = React.useState(true);
-	const toggleDrawer = () => {
-		setOpen(!open);
-	};
-
-	return (
-		<ThemeProvider theme={mdTheme}>
-			<Box sx={{ display: 'flex' }}>
-				<CssBaseline />
-				<AppBar position="absolute" open={open} style={{background: 'linear-gradient(to right, #070926, #A22E89)'}}>
-					<Toolbar
-						sx={{
-							pr: '24px', // keep right padding when drawer closed
-						}}
-					>
-						<IconButton
-							edge="start"
-							color="inherit"
-							aria-label="open drawer"
-							onClick={toggleDrawer}
-							sx={{
-								marginRight: '36px',
-								...(open && { display: 'none' }),
-							}}
-						>
-							<MenuIcon />
-						</IconButton>
-						<Typography
-							component="h1"
-							variant="h6"
-							color="inherit"
-							noWrap
-							sx={{ flexGrow: 1 }}
-						>
-							Stefanini
-						</Typography>
+function DashboardBenefits() {
+  const [open, setOpen] = React.useState(true);
+  const toggleDrawer = () => {
+    setOpen(!open);
+  };
 
   return (
     <ThemeProvider theme={mdTheme}>
@@ -153,6 +120,11 @@ function AdminAsideMenuContent() {
             >
               Stefanini
             </Typography>
+            {/*             <IconButton color="inherit">
+              <Badge badgeContent={4} color="secondary">
+                <NotificationsActiveIcon />
+              </Badge>
+            </IconButton> */}
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
@@ -173,11 +145,41 @@ function AdminAsideMenuContent() {
           <Divider />
           <List>{secondaryListItems}</List>
         </Drawer>
+
+        <Box
+          component="main"
+          sx={{
+            backgroundColor: (theme) =>
+              theme.palette.mode === "light"
+                ? theme.palette.grey[100]
+                : theme.palette.grey[900],
+            flexGrow: 1,
+            height: "100vh",
+            overflow: "auto",
+          }}
+        >
+          <Toolbar />
+
+          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+            <Grid container spacing={4}>
+              <Grid item xs={12} md={8} lg={9}>
+                <ContainerCards />
+              </Grid>
+              {/* Recent Orders */}
+              {/*               <Grid item xs={12} md={8} lg={9}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240}} elevation ={12}>
+               
+                </Paper>
+              </Grid> */}
+            </Grid>
+            <Copyright sx={{ pt: 4 }} />
+          </Container>
+        </Box>
       </Box>
     </ThemeProvider>
   );
 }
 
-export default function AdminAsideMenu() {
-  return <AdminAsideMenuContent />;
+export default function Dashboard() {
+  return <DashboardBenefits />;
 }

@@ -10,7 +10,7 @@ import { db } from '../../../../firebase';
 
 
 
-const childAllOptions = [
+const numberOfChildrenAllOptions = [
     {
         value: 'No tengo hijos',
         label: 'No tengo hijos',
@@ -75,14 +75,14 @@ const tshirtSizeAllOptions = [
 
 const UserAdd = () => {
 
-    const [childOptions, setChildOptions] = React.useState('No tengo hijos');
+    const [numberOfChildren, setNumberOfChildren] = React.useState('No tengo hijos');
     const [tshirtSize, setTshirtSize] = React.useState('');
 
-    const childHandleChange = (event) => {
-        setChildOptions(event.target.value);
+    const numberOfChildrenHandleChange = (event) => {
+        setNumberOfChildren(event.target.value);
     };
 
-    const tshirtHandleChange = (event) => {
+    const tshirtSizeHandleChange = (event) => {
         setTshirtSize(event.target.value);
     };
 
@@ -109,7 +109,6 @@ const UserAdd = () => {
     const createUser = () => {
         const email = personalData.email;
         const password = personalData.password
-        console.log('enviando datos...' + email + ' ' + password)
 
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, personalData.email, personalData.password)
@@ -132,12 +131,11 @@ const UserAdd = () => {
             pronouns: personalData.pronouns,
             dateOfBirth: personalData.dateOfBirth,
             email: personalData.email,
-            password: personalData.password,
-            tshirtSize: personalData.tshirtSize,
+           /*  password: personalData.password, */
+            tshirtSize: tshirtSize,
             shoeSize: personalData.shoeSize,
-            numberOfChildren: personalData.numberOfChildren
+            numberOfChildren: numberOfChildren
         });
-        console.log(docRef.id);
     };
 
 
@@ -222,7 +220,7 @@ const UserAdd = () => {
                             value={tshirtSize}
                             helperText="Para enviar regalos"
                             name="tshirtSize"
-                            onChange={tshirtHandleChange}
+                            onChange={tshirtSizeHandleChange}
 
                         >
                             {tshirtSizeAllOptions.map((option) => (
@@ -247,12 +245,12 @@ const UserAdd = () => {
                         <TextField
                             select
                             label="N° de Hijos"
-                            value={childOptions}
+                            value={numberOfChildren}
                             name="numberOfChildren"
-                            onChange={childHandleChange}
+                            onChange={numberOfChildrenHandleChange}
 
                         >
-                            {childAllOptions.map((option) => (
+                            {numberOfChildrenAllOptions.map((option) => (
                                 <MenuItem key={option.value} value={option.value}>
                                     {option.label}
                                 </MenuItem>

@@ -1,11 +1,12 @@
 import React from 'react'
 import { Button } from '@mui/material';
+import './menuOptionsComponents.css'
 
 const Moments = () => {
     return (
         <div>
-            Administración de Momentos Stefeniners       
-            <Button variant="contained">AGREGAR FOTOS</Button>
+            <p className="optionHeader">Administración de Momentos Stefeniners</p>    
+            <button className="menuOptionsbutton" variant="contained">Subir publicación</button>
         </div>
     )
 }

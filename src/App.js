@@ -9,7 +9,7 @@ import Dashboard from './components/DashBoard/Dashboard'
 import AdminAsideMenu from './components/adminView/AdminAsideMenu'
 import MiPerfil from './components/MiPerfilView/MiPerfil'
 import RhhView from './components/RRHHView/RhhView';
-import ContainerCards from './components/benefits/ContainerCards'
+import DashboardBenefits from './components/benefits/DashboardBenefits'
 import Moments from './components/adminView/menuOptionComponents/MomentsAdmin'
 import Stefaniners from './components/Momentos/Stefaniners';
 import AdminDashboard from './components/adminView/menuOptionComponents/AdminDashboard'
@@ -20,6 +20,7 @@ import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdm
 import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
 import StickyFooter from './components/adminView/StickyFooter';
 import PhotoStefaniners from './components/Momentos/PhotoStefaniners'
+
 
 
 
@@ -42,7 +43,7 @@ function App() {
 				</Route>
 
 				<Route exact path="/benefits">
-					<ContainerCards />
+				<DashboardBenefits />
 				</Route>
 				
 				<Route exact path="/rrhh">
@@ -128,6 +129,7 @@ function App() {
 							<Moments />
 						</div>
 					</div>
+					<StickyFooter />
 				</Route>
 				
 				<Route exact path="/perfil">

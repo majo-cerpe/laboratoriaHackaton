@@ -7,9 +7,9 @@ import Link from '@mui/material/Link';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary">
+    <Typography variant="body2" color="#FFFFFF">
       {'Copyright © '}
-      <Link color="inherit" href="https://stefanini.com/es">
+      <Link color="#FFFFFF" href="https://stefanini.com/es">
         Stefanini Group
       </Link>{' '}
       {new Date().getFullYear()}
@@ -23,8 +23,7 @@ const StickyFooter =() => {
     <Box
       sx={{
         display: 'flex',
-        flexDirection: 'column',
-        minHeight: '50vh',
+        flexDirection: 'column'
       }}
     >
       <CssBaseline />
@@ -35,12 +34,11 @@ const StickyFooter =() => {
           py: 3,
           px: 2,
           mt: 'auto',
-          backgroundColor: '#1976d2'
+          background: 'linear-gradient(to right, #070926,#167373 )'
         }}
       >
         <Container maxWidth="sm">
-          <Typography variant="body1">
-            sticky footer.
+          <Typography variant="body1" color="#FFFFFF">
           </Typography>
           <Copyright />
         </Container>

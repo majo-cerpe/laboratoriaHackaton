@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Title from './Title';
 import CarouselGrowth from  './CarouselGrowth';
+import { Typography } from '@mui/material';
 
 // Generate Order Data
 /* function createData(id, date, name, shipTo, paymentMethod, amount) {
@@ -56,7 +57,7 @@ function preventDefault(event) {
 export default function Orders() {
   return (
     <React.Fragment>
-      <Title>Crecimiento</Title>
+      <Typography variant="h5" style={{color: "#dcdcdc"}}>Crecimiento</Typography>
      <CarouselGrowth />
     </React.Fragment>
   );

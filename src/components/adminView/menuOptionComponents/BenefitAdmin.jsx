@@ -6,6 +6,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import './menuOptionsComponents.css'
 
 
 const BenefitAdmin = () => {
@@ -33,7 +34,7 @@ const BenefitAdmin = () => {
 
 	return (
 		<Fragment>
-			Administración de beneficios corporativos
+			<p className="optionHeader">Administración de beneficios corporativos</p>
 			<Container maxWidth="sm">
 				<Grid container spacing={1} justify="center">
 
@@ -88,7 +89,7 @@ const BenefitAdmin = () => {
 								onChange={e => setSecondaryText(e.target.value)}
 								variant="outlined"
 							/>
-							<Button type="submit" variant="contained">CREAR BENEFICIO</Button>
+							<button className="menuOptionsbutton" type="submit" variant="contained">Ingresar beneficio</button>
 						</div>
 					</Box>
 				</Grid>

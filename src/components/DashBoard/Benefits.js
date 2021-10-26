@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
-import { Card, CardHeader} from '@mui/material';
+import { Card, CardHeader, Typography} from '@mui/material';
 import Grid from '@mui/material/Grid'
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
 import CarouselBenefits from './CarouselBenefits';
+
 
 
 
@@ -32,10 +33,10 @@ export default function Benefits() {
 
   return (
     <React.Fragment>
-      <Title>Beneficios Stefaniner</Title>
+      <Typography variant="h5" style={{color: "#dcdcdc"}}>Beneficios Stefaniner</Typography>
       
-       <CarouselBenefits /> 
-      
+       
+      <CarouselBenefits />
   
       {/* <ResponsiveContainer>
         <LineChart

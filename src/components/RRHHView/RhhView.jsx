@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState} from 'react';
+import { useState } from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
@@ -22,161 +22,169 @@ import RhhText from './RhhText';
 import RhhCard from './RhhCard.jsx';
 import rhh from './rhh.json';
 import RhhReferralsTexts from './RhhReferralsTexts';
-import ReferralsFiles from'./ReferralsFiles';
+import ReferralsFiles from './ReferralsFiles';
+import logonovobranco from '../../assest/logonovobranco.png';
+import Avatar from '@mui/material/Avatar'
+import './rrhh.css'
+
 
 
 
 
 function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
+	return (
+		<Typography variant="body2" color="text.secondary" align="center" {...props}>
+			{'Copyright © '}
+			<Link color="inherit" href="https://mui.com/">
+				Your Website
+			</Link>{' '}
+			{new Date().getFullYear()}
+			{'.'}
+		</Typography>
+	);
 }
 
 const drawerWidth = 240;
 
 const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
+	shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
-  zIndex: theme.zIndex.drawer + 1,
-  transition: theme.transitions.create(['width', 'margin'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
+	zIndex: theme.zIndex.drawer + 1,
+	transition: theme.transitions.create(['width', 'margin'], {
+		easing: theme.transitions.easing.sharp,
+		duration: theme.transitions.duration.leavingScreen,
+	}),
+	...(open && {
+		marginLeft: drawerWidth,
+		width: `calc(100% - ${drawerWidth}px)`,
+		transition: theme.transitions.create(['width', 'margin'], {
+			easing: theme.transitions.easing.sharp,
+			duration: theme.transitions.duration.enteringScreen,
+		}),
+	}),
 }));
 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    '& .MuiDrawer-paper': {
-      position: 'relative',
-      whiteSpace: 'pre-line',
-      width: drawerWidth,
-      transition: theme.transitions.create('width', {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      boxSizing: 'border-box',
-      ...(!open && {
-        overflowX: 'hidden',
-        transition: theme.transitions.create('width', {
-          easing: theme.transitions.easing.sharp,
-          duration: theme.transitions.duration.leavingScreen,
-        }),
-        width: theme.spacing(7),
-        [theme.breakpoints.up('sm')]: {
-          width: theme.spacing(9),
-        },
-      }),
-    },
-  }),
+	({ theme, open }) => ({
+		'& .MuiDrawer-paper': {
+			position: 'relative',
+			whiteSpace: 'pre-line',
+			width: drawerWidth,
+			transition: theme.transitions.create('width', {
+				easing: theme.transitions.easing.sharp,
+				duration: theme.transitions.duration.enteringScreen,
+			}),
+			boxSizing: 'border-box',
+			...(!open && {
+				overflowX: 'hidden',
+				transition: theme.transitions.create('width', {
+					easing: theme.transitions.easing.sharp,
+					duration: theme.transitions.duration.leavingScreen,
+				}),
+				width: theme.spacing(7),
+				[theme.breakpoints.up('sm')]: {
+					width: theme.spacing(9),
+				},
+			}),
+		},
+	}),
 );
 
 const mdTheme = createTheme();
 
 function DashboardContent() {
-  const [open, setOpen] = React.useState(true);
-  const toggleDrawer = () => {
-    setOpen(!open);
-  };
+	const [open, setOpen] = React.useState(true);
+	const toggleDrawer = () => {
+		setOpen(!open);
+	};
 
-  const [texts, setTexts]= useState()
+	const [texts, setTexts] = useState()
 
-function addTodo(text){
-  setTexts([text,...texts]);
-}
-  return (
-    <ThemeProvider theme={mdTheme}>
-      <Box sx={{ display: 'flex' }}>
-        <CssBaseline />
-        <AppBar position="absolute" open={open}>
-          <Toolbar
-            sx={{
-              pr: '24px', // keep right padding when drawer closed
-            }}
-          >
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              onClick={toggleDrawer}
-              sx={{
-                marginRight: '36px',
-                ...(open && { display: 'none' }),
-              }}
-            >
-            <MenuIcon />
-            </IconButton>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              sx={{ flexGrow: 1 }}
-            >
-              Stefanini
-            </Typography>
-{/*             <IconButton color="inherit">
+
+	function addTodo(text) {
+		setTexts([text, ...texts]);
+	}
+	return (
+		<ThemeProvider theme={mdTheme}>
+			<Box sx={{ display: 'flex' }}>
+				<CssBaseline />
+				<AppBar position="absolute" open={open} style={{background: 'linear-gradient(to right, #070926, #A22E89)'}}>
+					<Toolbar
+						sx={{
+							pr: '24px', // keep right padding when drawer closed
+						}}
+					>
+						<IconButton
+							edge="start"
+							color="inherit"
+							aria-label="open drawer"
+							onClick={toggleDrawer}
+							sx={{
+								marginRight: '36px',
+								...(open && { display: 'none' }),
+							}}
+						>
+							<MenuIcon />
+						</IconButton>
+						<img src={logonovobranco} style={{ maxWidth: 150 }} >
+						</img>
+						<Typography
+							component="h1"
+							variant="h6"
+							color="inherit"
+							noWrap
+							sx={{ flexGrow: 1 }}
+						>
+
+						</Typography>
+						{/*             <IconButton color="inherit">
+
               <Badge badgeContent={4} color="secondary">
                 <NotificationsActiveIcon />
               </Badge>
             </IconButton> */}
-          </Toolbar>
-        </AppBar>
-        <Drawer variant="permanent" open={open}>
-          <Toolbar
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'flex-end',
-              px: [1],
-            }}
-          >
-            <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon />
-            </IconButton>
-          </Toolbar>
-          <Divider />
-          <List>{mainListItems}</List>
-          <Divider />
-          <List>{secondaryListItems}</List>
-        </Drawer>
+					</Toolbar>
+				</AppBar>
+				<Drawer variant="permanent" open={open}>
+					<Toolbar
+						sx={{
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'flex-end',
+							px: [1],
+						}}
+					>
+						<IconButton onClick={toggleDrawer}>
+							<ChevronLeftIcon />
+						</IconButton>
+					</Toolbar>
+					<Divider />
+					<List>{mainListItems}</List>
+					<Divider />
+					<List>{secondaryListItems}</List>
+				</Drawer>
 
-        <Box
-          component="main"
-          sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light'
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
-            flexGrow: 1,
-            height: '100vh',
-            overflow: 'auto',
-          }}
-        >
-          <Toolbar />
-          <RhhText />
-          <Container maxWidth="lg" sx={{ mt: 3, mb: 3 }}>
-            <Grid container spacing={1} /* direction='row' */>
+				<Box
+					component="main"
+					sx={{
+						backgroundColor: (theme) =>
+							theme.palette.mode === 'light'
+								? theme.palette.grey[100]
+								: theme.palette.grey[900],
+						flexGrow: 1,
+						height: '100vh',
+						overflow: 'auto',
+					}}
+				>
+					<Toolbar />
+					<RhhText />
+					<Container maxWidth="lg" sx={{ mt: 3, mb: 3 }}>
+						<Grid container spacing={1} /* direction='row' */>
 
-              <Grid item xs={12} md={12} lg={12} sx={{ mt: 4, mb: 4 }}>
-               
+							<Grid item xs={12} md={12} lg={12} sx={{ mt: 4, mb: 4 }}>
 
-{/*                 <Paper
+
+								{/*                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
@@ -186,46 +194,51 @@ function addTodo(text){
                   }}
                   elevation ={0}
                 > */}
-{/*                 <Item> */}
-          <Box 
-/*           bgcolor="primary.main"
-          color="primary.contrastText"  */
-          p={1}
-          display= 'flex'
-          justifyContent= 'center'
-          sx={{
-/*             height: 355,
-            width:1194,  */
-            display: 'flex',
-            flexDirection: 'colum',
-            
-            
-          }}
-            >
-                {rhh.map(((item) => {
-    	return<Box
-/*         bgcolor="secondary.main"
-        color="secondary.contrastText" */
-        display= 'flex'
-        sx={{
-           mx:11,
-/*            display: 'flex',
-           flexDirection: 'colum', */
-          }}
-        >
-            <RhhCard
-    	 title={item.title}
-    	 image={item.image}
-    	 buttonText={item.buttonText}
-    	 secondaryText={item.secondaryText}
-         link={item.link}
-         
-	  />
-      </Box>
-    }))}
-    </Box>
-{/*     </Item> */}
-{/*                 <Box
+								{/*                 <Item> */}
+								<Box
+									/*           bgcolor="primary.main"
+											  color="primary.contrastText"  */
+									p={1}
+									display='flex'
+									justifyContent='center'
+									sx={{
+										/*             height: 355,
+													width:1194,  */
+										display: 'flex',
+										flexDirection: 'colum',
+
+
+									}}
+								>
+									<div className="rrhhCard">
+										{rhh.map((item) => (
+											<Box
+												/*         bgcolor="secondary.main"
+														color="secondary.contrastText" */
+												display='flex'
+												sx={{
+													mx: 10,
+													marginTop: 2,
+													marginBottom: 2
+													/*            display: 'flex',
+															   flexDirection: 'colum', */
+												}}
+											>
+												<RhhCard
+													title={item.title}
+													image={item.image}
+													buttonText={item.buttonText}
+													secondaryText={item.secondaryText}
+													link={item.link}
+
+												/>
+											</Box>
+
+										))}
+									</div>
+								</Box>
+								{/*     </Item> */}
+								{/*                 <Box
       component="form"
       bgcolor="secondary.main"
       color="secondary.contrastText" 
@@ -239,30 +252,30 @@ function addTodo(text){
 
                    </Box> */}
 
-{/*                 </Paper> */}
-             <RhhReferralsTexts/>
-          <Box 
-/*           bgcolor="primary.main"
-          color="primary.contrastText"  */
-          p={1}
-          display= 'flex'
-          justifyContent= 'center'
-          sx={{
-/*             height: 355,
-            width:1194, */
-            mt:2,
-            display: 'flex',
-            flexDirection: 'row', 
-            
-            
-          }}
-            >
-                <ReferralsFiles />
-            </Box>
-              </Grid>
+								{/*                 </Paper> */}
+								<RhhReferralsTexts />
+								<Box
+									/*           bgcolor="primary.main"
+											  color="primary.contrastText"  */
+									p={1}
+									display='flex'
+									justifyContent='center'
+									sx={{
+										/*             height: 355,
+													width:1194, */
+										mt: 2,
+										display: 'flex',
+										flexDirection: 'row',
 
-              {/* VISTA PERFIL */}
- {/*              <Grid item xs={12} md={4} lg={3}>
+
+									}}
+								>
+									<ReferralsFiles />
+								</Box>
+							</Grid>
+
+							{/* VISTA PERFIL */}
+							{/*              <Grid item xs={12} md={4} lg={3}>
                 <Paper
                   sx={{
                     p: 2,
@@ -272,11 +285,11 @@ function addTodo(text){
                   }}
                   elevation ={12}
                 > */}
-                    {/*Empieza  caja y componente Avatar */}
+							{/*Empieza  caja y componente Avatar */}
 
 
-                   {/*Empieza  caja y componente UserInfoFinished*/}
-{/*                    <Box 
+							{/*Empieza  caja y componente UserInfoFinished*/}
+							{/*                    <Box 
           bgcolor="primary.main"
           color="primary.contrastText" 
           p={1}
@@ -290,21 +303,21 @@ function addTodo(text){
                    </Box>
                 </Paper>
               </Grid> */}
-              {/* Recent Orders */}
-{/*               <Grid item xs={12} md={8} lg={9}>
+							{/* Recent Orders */}
+							{/*               <Grid item xs={12} md={8} lg={9}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240}} elevation ={12}>
                
                 </Paper>
               </Grid> */}
-            </Grid>
-            <Copyright sx={{ pt: 4 }} />
-          </Container>
-        </Box>
-      </Box>
-    </ThemeProvider>
-  );
+						</Grid>
+						<Copyright sx={{ pt: 4 }} />
+					</Container>
+				</Box>
+			</Box>
+		</ThemeProvider>
+	);
 }
 
 export default function Dashboard() {
-  return <DashboardContent />;
+	return <DashboardContent />;
 }
