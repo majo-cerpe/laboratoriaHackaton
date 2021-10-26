@@ -8,14 +8,12 @@ import Checkbox from "@mui/material/Checkbox";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import firabase from "../firebase";
 import Image from "../assest/stefaninifondo.jpg"
 import logopequeñoazul from '../assest/logopequeñoazul.png';
-import SignInLogo from './SignInLogo';
 
 
 
@@ -108,8 +106,8 @@ export default function SignInSide() {
 							alignItems: 'center',
 						}}
 					>
-						 <Avatar  src={logopequeñoazul} sx={{ m: 1,  /* bgcolor: 'secondary.main' */ }}  style={{ height: '90px', width: '90px' }}>
-						 </Avatar> 
+						<Avatar src={logopequeñoazul} sx={{ m: 1 }} style={{ height: '90px', width: '90px' }}>
+						</Avatar>
 						<Typography component="h1" variant="h5">
 							Inicia Sesión
 						</Typography>

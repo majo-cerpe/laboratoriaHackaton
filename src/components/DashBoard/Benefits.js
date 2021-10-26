@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
-import { Card, CardHeader} from '@mui/material';
+import { Card, CardHeader, Typography} from '@mui/material';
 import Grid from '@mui/material/Grid'
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
@@ -33,7 +33,7 @@ export default function Benefits() {
 
   return (
     <React.Fragment>
-      <Title>Beneficios Stefaniner</Title>
+      <Typography variant="h5" style={{color: "#f5f5f5"}}>Beneficios Stefaniner</Typography>
       
        
       <CarouselBenefits />

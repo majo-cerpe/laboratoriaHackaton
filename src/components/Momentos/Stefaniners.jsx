@@ -17,6 +17,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import { mainListItems, secondaryListItems } from '../DashBoard/listItems';
 import PhotoStefaniners from  './PhotoStefaniners'
+import logonovobranco from '../../assest/logonovobranco.png';
+
 
    
 function Copyright(props) {
@@ -91,7 +93,7 @@ function AdminAsideMenuContent() {
 		<ThemeProvider theme={mdTheme}>
             <Box sx={{ display: 'flex' }}>
 				<CssBaseline />
-				<AppBar position="absolute" open={open}>
+				<AppBar position="absolute" open={open} style={{background: ' #301b70'}}>
 					<Toolbar
 						sx={{
 							pr: '24px', // keep right padding when drawer closed
@@ -109,6 +111,8 @@ function AdminAsideMenuContent() {
 						>
 							<MenuIcon />
 						</IconButton>
+						<img src={logonovobranco} style={{maxWidth:150}} >
+              </img> 
 						<Typography
 							component="h1"
 							variant="h6"
@@ -117,7 +121,6 @@ function AdminAsideMenuContent() {
 							sx={{ flexGrow: 1 }}
 						>
 						<Toolbar>
-                   stefanini
                     </Toolbar>
                 		</Typography>
 

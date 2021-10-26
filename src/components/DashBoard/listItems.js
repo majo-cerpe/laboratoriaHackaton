@@ -64,7 +64,7 @@ export const secondaryListItems = (
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="lorem" />
+      <ListItemText primary="Cerrar Sesión" />
     </a>
   </div>
 );

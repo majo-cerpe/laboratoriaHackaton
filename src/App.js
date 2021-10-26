@@ -25,6 +25,7 @@ import PhotoStefaniners from './components/Momentos/PhotoStefaniners'
 
 
 
+
 function App() {
 	return (
 		<Router>
@@ -42,7 +43,7 @@ function App() {
 				</Route>
 
 				<Route exact path="/benefits">
-					<ContainerCards />
+				<ContainerCards /> 
 				</Route>
 				
 				<Route exact path="/rrhh">

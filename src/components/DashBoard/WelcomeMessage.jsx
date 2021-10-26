@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 const WelcomeMessage = () => {
     return (
         <Fragment>
-            <h2>Hola, Elmer (nombre usuario)</h2>
+            <h2>Buenos Días</h2>
         </Fragment>
     )
 }
