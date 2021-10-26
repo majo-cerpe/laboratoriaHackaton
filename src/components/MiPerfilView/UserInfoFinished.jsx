@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Typography from '@mui/material/Typography';
 const UserInfoFinished = () => {
     return (
         <div>
-            <p className="name">Nombre: Nombre</p>
+            <Typography variant="p" /* style={{ backgroundColor: "#fffde7" }} */ className="name">Nombre: Nombre</Typography>
             <p className="lastName">Apellido: Apellido</p>
             <p className="pronouns">Pronombres: Pronombres</p>
             <p className="size">Talla Polera: Talla</p>

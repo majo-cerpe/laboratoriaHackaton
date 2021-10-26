@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Title from './Title';
-import { Input } from '@mui/material';
+import { Input, Typography } from '@mui/material';
 import { useState } from 'react';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Grid from '@mui/material/Grid'
@@ -59,7 +59,7 @@ export default function TodoList( /* {addTodo} */) {
   }  */
   return (
     <React.Fragment>
-      <Title>To do list </Title>
+      <Typography variant="h6">To do list </Typography>
       <form /*onSubmit= {handleSubmit} */>
           <FormControl fullWidth={true}>
             <TextField
@@ -73,8 +73,9 @@ export default function TodoList( /* {addTodo} */) {
               variant="contained"
               color="primary"
               size="small"
-              style={{ marginTop: 5 }}
+              style={{ marginTop: 5, background:'linear-gradient(50deg, #af861f 20%, #fbc02d 90%)' }}
               onClick={secondEvent}
+              
             >
               <AddIcon />
             </Button>
@@ -89,7 +90,7 @@ export default function TodoList( /* {addTodo} */) {
 				</ul>
         </form>
         <div>
-        <Button onClick={thirdEvent}>
+        <Button  onClick={thirdEvent}>
 					<DeleteIcon />Borrar todo
 				</Button>
         </div>

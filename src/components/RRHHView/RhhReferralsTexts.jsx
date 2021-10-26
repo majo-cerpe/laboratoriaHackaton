@@ -9,7 +9,8 @@ const RhhReferralsTexts = () => {
 /*             bgcolor="secondary.main"
             color="secondary.contrastText" */
             alignItems="center"
-            justifyContent= 'center' 
+            justifyContent= 'center'
+            style={{textAlign: 'center'}} 
             >
             <h2>¿Conoces a alguien que quiera ser un Stefaniner?</h2>
             <h5>Sube el curriculm de tu referido aquí</h5>

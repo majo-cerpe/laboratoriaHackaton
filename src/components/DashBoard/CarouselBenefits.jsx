@@ -51,10 +51,10 @@ const ArrayBenefit = ({name, description, image}) => {
     return (
         <React.Fragment>
            {/*  <img>{image}</img> */}
-            <h3>{name}</h3>
-            <p>{description}</p>
+            <h4 style={{color: "#f5f5f5"}}>{name}</h4>
+            <p style={{color: "#f5f5f5"}}>{description}</p>
             <Box  sx={{display: "flex", alignSelf:"flex-end"}}>
-            <Button variant="contained" color="primary" size ="small" >ver más</Button>
+            <Button variant="contained" size ="small" style={{background: 'linear-gradient(to right bottom, #f5f5f5)'}} >ver más</Button>
             </Box>
         </React.Fragment>
     );

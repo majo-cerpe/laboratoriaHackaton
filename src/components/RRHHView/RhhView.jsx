@@ -23,6 +23,8 @@ import RhhCard from './RhhCard.jsx';
 import rhh from './rhh.json';
 import RhhReferralsTexts from './RhhReferralsTexts';
 import ReferralsFiles from'./ReferralsFiles';
+import logoblanco from '../../assest/logoblanco.png';
+import Avatar  from '@mui/material/Avatar'
 
 
 
@@ -103,7 +105,7 @@ function addTodo(text){
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open}>
+        <AppBar position="absolute" open={open} style={{background: ' #301b70'}}>
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
@@ -128,6 +130,8 @@ function addTodo(text){
               noWrap
               sx={{ flexGrow: 1 }}
             >
+              <Avatar src={logoblanco}>
+              </Avatar>     
               Stefanini
             </Typography>
 {/*             <IconButton color="inherit">

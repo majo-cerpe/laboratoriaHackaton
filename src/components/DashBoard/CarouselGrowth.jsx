@@ -41,9 +41,9 @@ return (
 const ArrayGrowth = ({name, description,link}) => {
     return (
         <React.Fragment>
-            <h3>{name}</h3>
-            <p>{description}</p>
-            <a href={link}><Button variant="contained" color="primary" size ="small">Acceder</Button></a>
+            <h4 style={{color: "#f5f5f5"}}>{name}</h4>
+            <p style={{color: "#f5f5f5"}}>{description}</p>
+            <a href={link}><Button variant="contained" color="#ef6c00" size ="small" >Acceder</Button></a>
             
         </React.Fragment>
     );

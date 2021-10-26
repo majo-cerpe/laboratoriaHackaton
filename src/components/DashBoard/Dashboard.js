@@ -26,6 +26,8 @@ import ToDo from './ToDo';
 import AddTodoList from './AddTodoList';
 import Growth from './Growth';
 import CarouselBenefits from './CarouselBenefits';
+import logoblanco from '../../assest/logoblanco.png';
+import Avatar  from '@mui/material/Avatar'
 
 
 
@@ -105,11 +107,12 @@ function addTodo(text){
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open}>
+        <AppBar position="absolute" open={open} style={{background: ' #301b70'}} >
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
             }}
+
           >
             <IconButton
               edge="start"
@@ -130,8 +133,11 @@ function addTodo(text){
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Stefanini
+            <Avatar src={logoblanco}>
+              </Avatar>     
+               Stefanini
             </Typography>
+
 {/*             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <NotificationsActiveIcon />
@@ -185,6 +191,7 @@ function addTodo(text){
                     borderRadius: 2,
                   }}
                   elevation ={12}
+                  style={{background: 'linear-gradient(to right bottom, #301b70, #4527a0,#6a52b3)'}}
                 >
                   <Benefits />
 
@@ -200,6 +207,7 @@ function addTodo(text){
                     height: 300,
                   }}
                   elevation ={12}
+                  
                 >
                   <TodoList /* addTodo= {addTodo}  *//>
                  {/*  <AddTodoList texts={texts}/> */}
@@ -210,7 +218,7 @@ function addTodo(text){
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12} md={8} lg={9}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 2}} elevation ={12}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 2}} elevation ={12} style={{background: 'linear-gradient(to right bottom, #301b70, #4527a0,#6a52b3)'}}>
                   <Growth /> 
                 </Paper>
               </Grid>
