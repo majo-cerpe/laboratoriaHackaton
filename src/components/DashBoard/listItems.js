@@ -10,6 +10,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import  app  from '../../firebase';
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 
 const auth = getAuth(app)
 
@@ -31,7 +32,7 @@ export const mainListItems = (
 
     <a component="a" href="/stefaniners" className="button">
       <ListItemIcon>
-        <DashboardIcon />
+        <PhotoCameraIcon/>
       </ListItemIcon>
       <ListItemText primary="Momentos Stefaniners" />
     </a>

@@ -32,6 +32,7 @@ import WaveMoving from './WaveMoving';
 import stefaninicarusel from '../../assest/stefaninicarusel.png';
 import riego from '../../assest/tarjetashome.png'
 import fondoBenef from '../../assest/tarjetashome.png'
+import Caleendar from './Caleendar';
 
 
 function Copyright(props) {
@@ -216,7 +217,7 @@ function addTodo(text){
                  {/*  <ToDo /> */}
                   <Divider />
                 </Paper>
-                
+                {/* <Caleendar /> */}
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12} md={8} lg={9}>
