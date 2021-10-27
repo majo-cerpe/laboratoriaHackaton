@@ -5,7 +5,7 @@ const MiPerfilText = () => {
     return (
         <div>
         <Box sx={{m:2}}>
-            <h1>Mi Perfil</h1>
+            <h2>Mi Perfil</h2>
         </Box>
     </div>
 
