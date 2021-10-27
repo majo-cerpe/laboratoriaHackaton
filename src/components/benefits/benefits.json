@@ -38,6 +38,46 @@
 		"description":"2 Días por año. Divisibles por 1/2 días",
 		"text":"",
 		"secondaryText": "No acumulable. Previo acuerdo con tu Lider. No puede afectar la operación del negocio. No aplica para días sandwich."
+	  },
+	  {
+		"id": "6",
+		"image": "https://img.freepik.com/foto-gratis/concepto-mudanza-casa-cajas-carton-apiladas-habitacion_93675-74852.jpg?size=626&ext=jpg",
+		"title": "MUDANZA",
+		"description":"1 día libre",
+		"text":"",
+		"secondaryText": "Presentar documento de respaldo. Una 1 vez al año. Previo acuerdo con tu líder. No puede afectar la operación del negocio."
+	  },
+	  {
+		"id": "7",
+		"image": "https://s3-us-west-1.amazonaws.com/realisticshots/2016/0252.jpg",
+		"title": "SEGURO DE VIDA",
+		"description":"Seguro complementario de Vida, Salud y Dental con Vida Cámara. Stefanini cubre 100% al profesional.",
+		"text":"Consultas Miguel Espinal miguel.espinal@vidacamara.cl",
+		"secondaryText": ""
+	  },
+	  {
+		"id": "8",
+		"image": "https://s3-us-west-1.amazonaws.com/realisticshots/127.jpg",
+		"title": "PERMISO Sin goce de sueldo",
+		"description":"Apto para: cursos, viajes, temas familiares.",
+		"text": "Mínimo 1 año de antigüedad. Plazo máximo de 4 meses. Presentar documentación que respalde la solicitud. Previo acuerdo con tu líder No puede afectar la operación del negocio.",
+		"secondaryText": ""
+	  },
+	  {
+		"id": "9",
+		"image": "https://s3-us-west-1.amazonaws.com/realisticshots/95.jpg",
+		"title": "CUMPLEAÑOS HIJOS",
+		"description":"½ día libre",
+		"text": "Valido para hijos hasta los 18 años. Solo por el día del cumpleaños. Previo acuerdo con tu líder. No puede afectar La operación del negocio.",
+		"secondaryText": ""
+	  },
+	  {
+		"id": "10",
+		"image": "https://ichef.bbci.co.uk/news/624/amz/worldservice/live/assets/images/2015/06/19/150619150239_grieving_rose_624x351_thinkstock.jpg",
+		"title": "FALLECIMIENTO DE UN FAMILIAR",
+		"description":"Un día libre",
+		"text": "Hermanos y abuelos.",
+		"secondaryText": "Considerando que la ley otorga permiso en caso de fallecimiento de padres (tres días) cónyuge e hijos (siete días)."
 	  }
 	 
 	]
