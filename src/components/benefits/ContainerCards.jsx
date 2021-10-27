@@ -29,7 +29,7 @@ const ContainerCards = () => {
       <Grid container spacing={1} justify="center">
         {benefits.map((item) => {
           return (
-            <Box sx={{mt: 2, mb: 2,mx: 3 }} display="flex">
+            <Box sx={{mt: 2, mb: 2,mx: 3 }} display="flex" justifyContent="center">
             <CardBenefits
               title={item.title}
               description={item.description}
