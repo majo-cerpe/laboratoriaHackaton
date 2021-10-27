@@ -5,6 +5,7 @@ import CardBenefits from "./CardBenefits";
 import benefits from "./benefits.json";
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
+import Box from '@mui/material/Box';
 
 const ContainerCards = () => {
   React.useEffect(() => {
@@ -24,11 +25,11 @@ const ContainerCards = () => {
 
   return (
     <Fragment>
-            <h2>Beneficios Corporativos</h2>
-           
+      <h2>Beneficios Corporativos</h2>
       <Grid container spacing={1} justify="center">
         {benefits.map((item) => {
           return (
+            <Box sx={{mt: 2, mb: 2,mx: 3 }} display="flex" justifyContent="center">
             <CardBenefits
               title={item.title}
               description={item.description}
@@ -36,6 +37,7 @@ const ContainerCards = () => {
               text={item.text}
               secondaryText={item.secondaryText}
             />
+            </Box>
           );
         })}
       </Grid>

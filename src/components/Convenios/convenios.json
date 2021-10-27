@@ -1,0 +1,52 @@
+[
+    {
+      "id": "1",
+      "image": "https://www.diarioconstitucional.cl/wp-content/uploads/2021/01/mutual-cchc.png",
+      "title": "Mutual de Seguridad",
+      "description":"Beneficios y descuentos en atención médica Mayor información en:",
+      "text":"www.mutual.cl"
+      
+    },
+    {
+      "id": "2",
+      "image": "https://lh3.googleusercontent.com/proxy/ttIKNnEwh5K6LJCUdoAtUyfjAdI68cOedIo496UD0n5Wz33eipeJtB3jL7jVEAPgerCv321IRM9YhSWfVzlsToKxa0Tu6EIhuVyeyg",
+      "title": "Caja los Andes",
+      "description":"Para ver gama de descuentos u otros beneficios asociados visita:",
+       "text":"www.cajalosandes.cl"
+     
+    },
+    {
+      "id": "3",
+      "image": "https://www.duoc.cl/wp-content/uploads/2021/03/logo-t-comportamiento.jpg",
+      "title": "Centro de terapia del comportamiento",
+      "description":"Institución con más de 40 años de experiencia en salud mental, emocional y conductual.",
+      "text":"Mayor información: Elena Cancino Ojeda - Correo: ecancino@terapiaonline.cl -Teléfono: +56994481560"
+      
+    },
+    {
+      "id": "4",
+      "image": "data:image/png;base64,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",
+      "title": "Clinica dental Cumbres",
+      "description":"Tú y tu familia podrán disfrutar de este beneficio, con descuentos desde un 50% sobre el precio de lista",
+      "text":"Los tratamientos pueden ser pagados hasta en ocho cuotas sin interés, siempre que cada cuota sea superior a 1,5 UF"
+      
+    },
+    {
+      "id": "5",
+      "image": "https://ioi.cl/wp-content/uploads/2017/01/logo.png",
+      "title": "Instituto Oftalmologico IOI",
+      "description":"Evaluación y diagnóstico quirúrgico sin costo para ti y tu grupo familia",
+      "text":"Para mayor información: www.ioi.cl"
+      
+    },
+
+    {
+      "id": "6",
+      "image": "https://i.ytimg.com/an/RJeWrmI8KWQ/5346115e-71c7-4c73-a6f0-3e78e0126054_mq.jpg?v=5c6c1297",
+      "title": "Next_u",
+      "description":"Únete a una de nuestras siete escuelas o contrata tu plan All Suites • TI • Diseño • Negocios Digitales • Marketing Digital • Desarrollo Web • Emprendimiento • Cloud Computing. • Programación de Apps",
+      "text":"Plan Premium: acceso a todas las suites de Next_U, 80% de descuento ti y tus familiares"
+      
+    }
+   
+  ]

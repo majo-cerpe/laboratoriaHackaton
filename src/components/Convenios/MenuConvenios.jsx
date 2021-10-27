@@ -17,21 +17,10 @@ import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-import WelcomeMessage from './WelcomeMessage';
-import { mainListItems, secondaryListItems } from './listItems';
-import Benefits from './Benefits';
-import TodoList from './TodoList';
-import ToDo from './ToDo';
-import AddTodoList from './AddTodoList';
-import Growth from './Growth';
-import CarouselBenefits from './CarouselBenefits';
+import { mainListItems, secondaryListItems } from '../DashBoard/listItems';
 import logonovobranco from '../../assest/logonovobranco.png';
-import Avatar  from '@mui/material/Avatar'
-import WaveMoving from './WaveMoving';
-import stefaninicarusel from '../../assest/stefaninicarusel.png';
-import riego from '../../assest/tarjetashome.png'
-import fondoBenef from '../../assest/tarjetashome.png'
+import ContainerCardsConvenios from  './ContainerCardsConvenios'
+
 
 
 function Copyright(props) {
@@ -95,7 +84,8 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const mdTheme = createTheme();
 
-function DashboardContent() {
+
+function MenuConvenios() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -115,7 +105,6 @@ function addTodo(text){
             sx={{
               pr: '24px', // keep right padding when drawer closed
             }}
-
           >
             <IconButton
               edge="start"
@@ -129,17 +118,15 @@ function addTodo(text){
             >
             <MenuIcon />
             </IconButton>
-            <img src={logonovobranco} style={{maxWidth:150}} >
-              </img> 
             <Typography
               component="h1"
               variant="h6"
               color="inherit"
               noWrap
               sx={{ flexGrow: 1 }}
-            >  
+            >
+              Stefanini
             </Typography>
-
 {/*             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <NotificationsActiveIcon />
@@ -165,6 +152,7 @@ function addTodo(text){
           <Divider />
           <List>{secondaryListItems}</List>
         </Drawer>
+
         <Box
           component="main"
           sx={{
@@ -178,63 +166,32 @@ function addTodo(text){
           }}
         >
           <Toolbar />
+        
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={4}>
 
-              <Grid item xs={12} md={8} lg={9}>
-                <WelcomeMessage sx={{m:4}}/>
-
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 240,
-                    borderRadius: 2,
-                  }}
-                  elevation ={12}
-                 style={{backgroundImage: `url(${fondoBenef})`, backgroundRepeat: 'no-repeat',
-                 backgroundSize: 'cover',}}  
-                >
-                  <Benefits />
-                </Paper>
-              </Grid>
-              {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={3}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 300,
-                  }}
-                  elevation ={12}
-                  
-                >
-                  <TodoList /* addTodo= {addTodo}  *//>
-                 {/*  <AddTodoList texts={texts}/> */}
-                 {/*  <ToDo /> */}
-                  <Divider />
-                </Paper>
-                
+              <Grid item xs={5} md={8} lg={9}>
+               
+                <ContainerCardsConvenios/>
               </Grid>
               {/* Recent Orders */}
-              <Grid item xs={12} md={8} lg={9}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:280, borderRadius: 2}} elevation={12}  style={{backgroundImage: `url(${riego})`, backgroundRepeat: 'no-repeat',
-                 backgroundSize: 'cover'}}>
-                  <Growth /> 
+{/*               <Grid item xs={12} md={8} lg={9}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240}} elevation ={12}>
+               
                 </Paper>
-              </Grid>
+              </Grid> */}
             </Grid>
             <Copyright sx={{ pt: 4 }} />
           </Container>
         </Box>
       </Box>
-      
     </ThemeProvider>
   );
 }
 
-export default function Dashboard() {
-  return <DashboardContent />;
+export default function dashboard() {
+  return <MenuConvenios/>;
 }
+
+
+

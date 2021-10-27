@@ -4,6 +4,11 @@ import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonIcon from '@mui/icons-material/Person';
 import GroupsIcon from '@mui/icons-material/Groups';
+import PeopleIcon from '@mui/icons-material/People';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+import WorkIcon from '@mui/icons-material/Work';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import  app  from '../../firebase';
 import { getAuth, signOut } from "firebase/auth";
 import PartyModeIcon from '@mui/icons-material/PartyMode'
@@ -46,27 +51,25 @@ export const mainListItems = (
 
   </div>
 );
-
 export const secondaryListItems = (
   <div>
-  
     <a component="a" href="/benefits" className="button">
       <ListItemIcon>
-        <SentimentVerySatisfiedIcon />
+        <VolunteerActivismIcon />
+
       </ListItemIcon>
       <ListItemText primary="Beneficios" />
     </a>
 
     <a component="a" href="/convenios" className="button">
       <ListItemIcon>
-        <GroupsIcon />
+        <WorkIcon /> 
       </ListItemIcon>
       <ListItemText primary="Convenios" />
     </a>
-
     <a  component="a"  href="/"  className="button" onClick={() => signOut(auth)}>
       <ListItemIcon>
-        <PowerSettingsNewIcon />
+        <ExitToAppIcon /> 
       </ListItemIcon>
       <ListItemText primary="Cerrar Sesión" />
     </a>
