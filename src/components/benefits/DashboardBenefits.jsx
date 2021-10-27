@@ -16,6 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { mainListItems, secondaryListItems } from "../DashBoard/listItems";
 import ContainerCards from "./ContainerCards";
+import logonovobranco from '../../assest/logonovobranco.png';
 
 function Copyright(props) {
   return (
@@ -93,7 +94,7 @@ function DashboardBenefits() {
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open}>
+        <AppBar position="absolute" open={open} style={{background: 'linear-gradient(to right, #070926, #A22E89)'}} >
           <Toolbar
             sx={{
               pr: "24px", // keep right padding when drawer closed
@@ -118,7 +119,8 @@ function DashboardBenefits() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Stefanini
+              <img src={logonovobranco} style={{maxWidth:150}} >
+              </img> 
             </Typography>
             {/*             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
@@ -153,7 +155,7 @@ function DashboardBenefits() {
               theme.palette.mode === "light"
                 ? theme.palette.grey[100]
                 : theme.palette.grey[900],
-            flexGrow: 1,
+            flexGrow: 2,
             height: "100vh",
             overflow: "auto",
           }}
@@ -161,8 +163,8 @@ function DashboardBenefits() {
           <Toolbar />
 
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={4}>
-              <Grid item xs={12} md={8} lg={9}>
+            <Grid container spacing={1} alignItems="center">
+              <Grid item xs={12} md={8} lg={10} justifyContent="center">
                 <ContainerCards />
               </Grid>
               {/* Recent Orders */}
