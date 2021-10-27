@@ -30,9 +30,8 @@ import logonovobranco from '../../assest/logonovobranco.png';
 import Avatar  from '@mui/material/Avatar'
 import WaveMoving from './WaveMoving';
 import stefaninicarusel from '../../assest/stefaninicarusel.png';
-import riego from '../../assest/tarjetashome.png'
-import fondoBenef from '../../assest/tarjetashome.png'
-
+import riego from '../../assest/riego.png'
+import fondoBenef from '../../assest/fondoBenef.jpg'
 
 
 function Copyright(props) {
@@ -216,6 +215,7 @@ function addTodo(text){
                  {/*  <ToDo /> */}
                   <Divider />
                 </Paper>
+                
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12} md={8} lg={9}>
