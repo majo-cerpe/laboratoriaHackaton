@@ -54,7 +54,7 @@ export default function SignInSide() {
 			.then((userCredential) => {
 				// Signed in
 				const user = userCredential.user;
-				if (email === "mariajos.cerpe@gmail.com") {
+				if (email === "ngpena@stefanini.com") {
 					window.location.assign("/adminViewDashboard");
 				} else {
 					window.location.assign("/home");
