@@ -20,10 +20,7 @@ import BenefitAdmin from './components/adminView/menuOptionComponents/BenefitAdm
 import PartnershipAdmin from './components/adminView/menuOptionComponents/PartnershipAdmin';
 import StickyFooter from './components/adminView/StickyFooter';
 import PhotoStefaniners from './components/Momentos/PhotoStefaniners'
-
-
-
-
+import Convenios from './components/Convenios/MenuConvenios';
 
 
 function App() {
@@ -142,6 +139,13 @@ function App() {
 						<div>
 							<PhotoStefaniners />
 						</div>
+					</div>
+				</Route>
+
+				<Route exact path="/convenios">
+					<div>
+						<Convenios />
+						
 					</div>
 				</Route>
 				
