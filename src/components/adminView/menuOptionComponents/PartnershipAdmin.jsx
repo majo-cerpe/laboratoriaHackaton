@@ -16,6 +16,7 @@ const PartnerAdmin = () => {
 	return (
 		<Fragment>
 			<p className="optionHeader">Administración de convenios</p>
+			<p className="underConstruction">En construcción. Estamos Trabajando para usted   :) </p>
 			<Container maxWidth="sm">
 				<Grid container spacing={1} justify="center">
 
