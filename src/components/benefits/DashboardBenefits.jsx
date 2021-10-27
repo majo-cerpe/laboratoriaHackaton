@@ -16,6 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { mainListItems, secondaryListItems } from "../DashBoard/listItems";
 import ContainerCards from "./ContainerCards";
+import logonovobranco from '../../assest/logonovobranco.png';
 
 function Copyright(props) {
   return (
@@ -93,7 +94,7 @@ function DashboardBenefits() {
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open}>
+        <AppBar position="absolute" open={open} style={{background: 'linear-gradient(to right, #070926, #A22E89)'}} >
           <Toolbar
             sx={{
               pr: "24px", // keep right padding when drawer closed
@@ -118,7 +119,8 @@ function DashboardBenefits() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Stefanini
+              <img src={logonovobranco} style={{maxWidth:150}} >
+              </img> 
             </Typography>
             {/*             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
