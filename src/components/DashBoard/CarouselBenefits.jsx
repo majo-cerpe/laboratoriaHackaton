@@ -4,7 +4,6 @@ import { Paper, Button } from '@material-ui/core'
 import Grid from '@mui/material/Grid'
 import { Box } from '@mui/system';
 
-import matri from '../../assest/matri.jpg';
 
 
 export default function CarouselBenefits() {
@@ -42,9 +41,9 @@ const ArrayBenefit = ({name, description, image, link}) => {
    /*  const classes =useStyles(); */
     return (
         <React.Fragment>
-           
-           <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 2}} elevation ={12} style={{backgroundImage: `url(${image})`}}>
-            <h4 style={{color: "#f5f5f5"}}>{name}</h4>
+        
+           <Box /* sx={{  p: 2, display: 'flex', flexDirection: 'column'  height:240  borderRadius: 2}} */ /* elevation ={12} */  /* style={{ backdropFilter: "blur(3px)"}} */>
+            <h4 style={{color: "#f5f5f5"}} >{name}</h4>
             <p style={{color: "#f5f5f5"}}>{description}</p>
             <Box  sx={{display: "flex", alignSelf:"flex-end"}}>
            
@@ -53,7 +52,7 @@ const ArrayBenefit = ({name, description, image, link}) => {
 
             </Box>
                   
-                </Paper>
+                </Box>
 
         </React.Fragment>
     );
