@@ -25,7 +25,7 @@ const ContainerCards = () => {
 
   return (
     <Fragment>
-      <h1>Beneficios Corporativos</h1>
+      <h2>Beneficios Corporativos</h2>
       <Grid container spacing={1} justify="center">
         {benefits.map((item) => {
           return (
