@@ -1,12 +1,14 @@
-import React, { Fragment, useState, useEffect} from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import Paper from '@mui/material/Paper'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import './userAdmin.css'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { collection, addDoc, doc, setDoc } from '@firebase/firestore';
+import { collection, addDoc } from '@firebase/firestore';
 import { db } from '../../../../firebase';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 
 
 
@@ -72,8 +74,24 @@ const tshirtSizeAllOptions = [
     },
 ];
 
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
+
 
 const UserAdd = () => {
+
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
     const [numberOfChildren, setNumberOfChildren] = React.useState('No tengo hijos');
     const [tshirtSize, setTshirtSize] = React.useState('');
@@ -107,8 +125,6 @@ const UserAdd = () => {
     }
 
     const createUser = () => {
-        const email = personalData.email;
-        const password = personalData.password
 
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, personalData.email, personalData.password)
@@ -131,7 +147,7 @@ const UserAdd = () => {
             pronouns: personalData.pronouns,
             dateOfBirth: personalData.dateOfBirth,
             email: personalData.email,
-           /*  password: personalData.password, */
+            /*  password: personalData.password, */
             tshirtSize: tshirtSize,
             shoeSize: personalData.shoeSize,
             numberOfChildren: numberOfChildren
@@ -142,6 +158,8 @@ const UserAdd = () => {
     const addAndSaveButton = () => {
         createUser();
         saveInFirestore()
+        handleOpen()
+
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -224,7 +242,11 @@ const UserAdd = () => {
 
                         >
                             {tshirtSizeAllOptions.map((option) => (
-                                <MenuItem key={option.value} value={option.value}>
+                                <MenuItem key={option.value} value={option.value}
+                                    /* sx={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                    }} */>
                                     {option.label}
                                 </MenuItem>
                             ))}
@@ -271,6 +293,24 @@ const UserAdd = () => {
                 <button type="submit" className="userAdminbutton addButton" onClick={() => addAndSaveButton()}>
                     Agregar usuario
                 </button>
+                <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                >
+                    <Box sx={style}>
+                        <Typography id="modal-modal-title" variant="h6" component="h2">
+                            Usuario creado con éxito
+                        </Typography>
+                        <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                            {/* here i can put a body to the modal*/}
+                        </Typography>
+                        <button type="submit" className="userAdminbutton addButton" onClick={() => handleClose()}>
+                            Cerrar
+                        </button>
+                    </Box>
+                </Modal>
             </Box>
         </Paper>
     )
