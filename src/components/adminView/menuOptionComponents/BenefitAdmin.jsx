@@ -3,7 +3,6 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from '../../../firebase'
 import { Grid } from '@mui/material'
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import './menuOptionsComponents.css'
@@ -35,6 +34,7 @@ const BenefitAdmin = () => {
 	return (
 		<Fragment>
 			<p className="optionHeader">Administración de beneficios corporativos</p>
+			<p className="underConstruction">En construcción. Estamos Trabajando para usted   :) </p>
 			<Container maxWidth="sm">
 				<Grid container spacing={1} justify="center">
 

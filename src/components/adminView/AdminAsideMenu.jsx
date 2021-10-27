@@ -90,7 +90,7 @@ const AdminAsideMenu = () => {
 							onClick={toggleDrawer}
 							sx={{
 								marginRight: '36px',
-								...(open && { visibility:"hidden"}),
+								...(open && { visibility:"hidden", marginRight: '0px'}),
 							}}
 						>
 							<MenuIcon />

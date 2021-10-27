@@ -194,8 +194,7 @@ function addTodo(text){
                     borderRadius: 2,
                   }}
                   elevation ={12}
-                 style={{backgroundImage: `url(${fondoBenef})`, backgroundRepeat: 'no-repeat',
-                 backgroundSize: 'cover',}}  
+                  style={{backgroundImage: `url(${fondoBenef})`}} 
                 >
                   <Benefits />
                 </Paper>
@@ -220,8 +219,7 @@ function addTodo(text){
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12} md={8} lg={9}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:280, borderRadius: 2}} elevation={12}  style={{backgroundImage: `url(${riego})`, backgroundRepeat: 'no-repeat',
-                 backgroundSize: 'cover'}}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:240, borderRadius: 2}} elevation ={12} style={{backgroundImage: `url(${riego})`}}>
                   <Growth /> 
                 </Paper>
               </Grid>
