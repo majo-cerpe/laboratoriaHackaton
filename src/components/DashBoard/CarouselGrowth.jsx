@@ -1,7 +1,6 @@
 import React from 'react'
 import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@material-ui/core'
-import { Box } from '@mui/system';
 
 
 export default function CarouselGrowth() {
@@ -46,14 +45,14 @@ const ArrayGrowth = ({name, description,link, image}) => {
 
         <React.Fragment>
 
-<Box   sx={{ p: 2, display: 'flex', flexDirection: 'column'}}>
+<Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height:290, borderRadius: 2}} elevation ={18} style={{backgroundImage: `url(${image})`}}>
            
-            <h4 style={{color: "#f5f5f5"}}>{name}</h4>
-            <p style={{color: "#f5f5f5"}}>{description}</p>
+            <h4 style={{color: "#fffff"}}>{name}</h4>
+            <p style={{color: "#fffff"}}>{description}</p>
             <a href={link}><Button variant="contained" color="#ef6c00" size ="small" >Acceder</Button></a>
             
                   
-                </Box>
+                </Paper>
 
         </React.Fragment>
     );

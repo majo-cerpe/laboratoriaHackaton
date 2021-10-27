@@ -5,12 +5,9 @@ import ListSubheader from '@mui/material/ListSubheader';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
-import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
-import WorkIcon from '@mui/icons-material/Work';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 import  app  from '../../firebase';
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
-import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 
 const auth = getAuth(app)
 
@@ -32,7 +29,7 @@ export const mainListItems = (
 
     <a component="a" href="/stefaniners" className="button">
       <ListItemIcon>
-        <PhotoCameraIcon/>
+        <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Momentos Stefaniners" />
     </a>
@@ -50,24 +47,25 @@ export const mainListItems = (
 
 export const secondaryListItems = (
   <div>
-    
+    <ListSubheader inset>Otra sección</ListSubheader>
+
     <a component="a" href="/benefits" className="button">
       <ListItemIcon>
-        <VolunteerActivismIcon />
+        <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Beneficios" />
     </a>
 
     <a component="a" href="/convenios" className="button">
       <ListItemIcon>
-        <WorkIcon /> 
+        <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Convenios" />
     </a>
 
     <a  component="a"  href="/"  className="button" onClick={() => signOut(auth)}>
       <ListItemIcon>
-        <ExitToAppIcon /> 
+        <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Cerrar Sesión" />
     </a>

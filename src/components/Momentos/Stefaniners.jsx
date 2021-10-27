@@ -125,8 +125,7 @@ function addTodo(text){
               noWrap
               sx={{ flexGrow: 1 }}
             >
-            <img src={logonovobranco} style={{ maxWidth: 150 }} >
-						</img>
+              Stefanini
             </Typography>
 {/*             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
@@ -169,9 +168,9 @@ function addTodo(text){
           <Toolbar />
         
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={1}>
+            <Grid container spacing={4}>
 
-              <Grid item xs={12} md={8} lg={9}>
+              <Grid item xs={5} md={8} lg={9}>
                
                 <PhotoStefaniners/>
               </Grid>
@@ -182,11 +181,10 @@ function addTodo(text){
                 </Paper>
               </Grid> */}
             </Grid>
-
+            <Copyright sx={{ pt: 4 }} />
           </Container>
         </Box>
       </Box>
-      <Copyright sx={{ pt: 4 }} />
     </ThemeProvider>
   );
 }
